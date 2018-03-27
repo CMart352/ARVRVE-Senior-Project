@@ -170,6 +170,7 @@
      <Compile Include="Assets\UI Assets\Scripts\PlayCommand.cs" />
      <Compile Include="Assets\UI Assets\Scripts\PlayerMovingTest.cs" />
      <Compile Include="Assets\UI Assets\Scripts\QuitGame.cs" />
+     <Compile Include="Assets\UI Assets\Scripts\removeCommand.cs" />
      <Compile Include="Assets\UI Assets\Scripts\ScrollBarHandler.cs" />
      <Compile Include="Assets\UI Assets\Scripts\SpawnInstructions.cs" />
      <Compile Include="Assets\UI Assets\Scripts\Timer.cs" />
