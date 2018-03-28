@@ -5,6 +5,7 @@ using UnityEngine;
 public class CubeTrigger : MonoBehaviour
 {
     public GameObject player;
+    public GameObject destination;
 
 	// Use this for initialization
 	void Start ()
@@ -17,7 +18,8 @@ public class CubeTrigger : MonoBehaviour
         if(other.gameObject == player)
         {
             print("Trigger activated!");
-            other.transform.position = new Vector3(-9,9,-5);
+            //other.transform.position = new Vector3(-9,9,-5);
+            other.transform.position = destination.transform.position;
         }
     }
 
@@ -26,7 +28,8 @@ public class CubeTrigger : MonoBehaviour
         if (other.gameObject == player)
         {
             print("Trigger activated!");
-            other.transform.position = new Vector3(-9, 9, -5);
+            //other.transform.position = new Vector3(-9, 9, -5);
+            other.transform.position = destination.transform.position;
         }
     }
 
@@ -35,7 +38,8 @@ public class CubeTrigger : MonoBehaviour
         if (other.gameObject == player)
         {
             print("Trigger activated!");
-            other.transform.position = new Vector3(-9, 9, -5);
+            //other.transform.position = new Vector3(-9, 9, -5);
+            other.transform.position = destination.transform.position;
         }
     }
     // Update is called once per frame
