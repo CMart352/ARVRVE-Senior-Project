@@ -23,8 +23,8 @@ public class AuthenticatePlayer : MonoBehaviour {
 					/**Your code goes here**/
 					Debug.Log("Error Authenticating Player...");
 
-				   playerTextError.text = "Not valid user ";
-				   playerTextError.color = Color.red;
+				    playerTextError.text = "Not valid user ";
+				    playerTextError.color = Color.red;
 
 				}
 			});
