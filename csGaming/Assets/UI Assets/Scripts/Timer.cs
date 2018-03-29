@@ -37,7 +37,7 @@ public class Timer : MonoBehaviour {
 	void UpdateText()
 	{
 		int sec = (int)seconds;
-		clockText.text = minutes + ":" + sec;
+        clockText.text = minutes.ToString("00") + ":" + sec.ToString("00");
 
 	}
 }

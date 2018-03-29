@@ -142,6 +142,7 @@
      <Compile Include="Assets\Scripts\DiamondRotation.cs" />
      <Compile Include="Assets\Scripts\errorMessages.cs" />
      <Compile Include="Assets\Scripts\GameSparksManager.cs" />
+     <Compile Include="Assets\Scripts\KeyRotation.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Login.cs" />
      <Compile Include="Assets\Scripts\PressingTrigger.cs" />
