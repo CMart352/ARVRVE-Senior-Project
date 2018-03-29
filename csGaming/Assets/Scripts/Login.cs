@@ -19,11 +19,14 @@ public class Login : MonoBehaviour {
 	public Text assk1;
 	public Text assk2;
 
+	public Text playerValidMessage; 
 
+	public void uploadScene() {
+		print ("we are here ");
+		AuthenticatePlayer.AunthenticatePlayerBttn (username, password, "Level_01", playerValidMessage);
 
+	}
 
-
-	/* checks length for password */
 
 
 
@@ -47,7 +50,7 @@ public class Login : MonoBehaviour {
 
 		if( Input.GetKeyDown(KeyCode.Return) ) { 
 
-			AuthenticatePlayer.AunthenticatePlayerBttn (username, password, "Level_01");
+			uploadScene();
 		}
 
 
