@@ -44,9 +44,17 @@ public class Validation : MonoBehaviour {
 	}
 
 	public static bool validatePassword(string password) {
-		if (password != "")
+		int val = 0;
+		if (password != "" )
 		{
-			return Regex.IsMatch(password, MatchPasswordPattern);
+			foreach (char item in password) {
+				string Item = item.ToString ();
+				if (Int32.TryParse ( Item, out val)){
+
+					return Regex.IsMatch(password, MatchPasswordPattern);
+
+				}
+			}
 		}
 		return false;
 	}
