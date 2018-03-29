@@ -9,6 +9,7 @@ public class ClearAllCommands : MonoBehaviour {
 	public Transform parentTransform;
 	public GameObject player;
 	Vector3 originalPos;
+	Quaternion originalRot; 
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,7 @@ public class ClearAllCommands : MonoBehaviour {
 		Button clearBtn = clearButton.GetComponent<Button>();
 		clearButton.onClick.AddListener(Clear);
 		originalPos = player.transform.position;
+		originalRot = player.transform.rotation;
 		
 	}
 	
@@ -37,6 +39,7 @@ public class ClearAllCommands : MonoBehaviour {
 
 		//Move player to its original position
 		player.transform.position = originalPos;
+		player.transform.rotation = originalRot;
 
 	}
 }

@@ -8,7 +8,17 @@ public class SubmitButtonHandler : MonoBehaviour {
 	public Transform solutionPanel;
 	public GameObject player;
 	Vector3 originalPos;
+	Quaternion originalRot;
+
 	public Button submit;
+	public Button clear;
+	/*public Button upBtn;
+	public Button downBtn;
+	public Button leftBtn;
+	public Button rightBtn;*/
+
+	GameObject[] editBtn;
+
 	UIPlayCommand commandExecution;
 	UIButtonClick commandProcessor;
 
@@ -20,6 +30,8 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 		//Record original position of the player 
 		originalPos = player.transform.position;
+		originalRot = player.transform.rotation;
+
 
 		//Create instance of the two player handler classes
 		commandProcessor = GetComponent<UIButtonClick>();
@@ -30,7 +42,11 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	void AddCommandsToCommandList()
 	{
+		
+
+		/* Return player to original position */
 		player.transform.position = originalPos;
+		player.transform.rotation = originalRot;
 
 		/*If user had previously clicked the play Button, return player to original position and 
 		 * clear commandList so that when user clicks it again, commands are not duplicated
@@ -47,12 +63,28 @@ public class SubmitButtonHandler : MonoBehaviour {
 			//Move player to its original position
 			AddCommandsToCommandList();
 		}
+
+		/* Disable all controls while character is moving */
+		submit.interactable = false;
+		clear.interactable = false; 
+
+		/*upBtn.interactable = false;
+		downBtn.interactable = false; 
+		leftBtn.interactable = false;
+		rightBtn.interactable = false; */
+
+		editBtn = GameObject.FindGameObjectsWithTag ("Edits");
+
+		foreach (GameObject btn in editBtn) {
+			btn.GetComponent<Button>().interactable = false;
+		}
 	}
 
 	void sendCommandsToCharacter()
 	{
 		//UIPlayCommand.Execute executes the command list
 		commandExecution.TaskOnClick();
+
 
 	}
 

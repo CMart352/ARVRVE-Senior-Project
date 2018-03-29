@@ -7,6 +7,7 @@ public class removeCommand : MonoBehaviour {
 
 	public Button removeSign;
 	public GameObject commandPrefab;
+	public Button submitButton;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,8 @@ public class removeCommand : MonoBehaviour {
 
 	void Remove()
 	{
-		Destroy (commandPrefab);
-
+		if (submitButton.interactable == true) {
+			Destroy (commandPrefab);
+		}
 	}
 }

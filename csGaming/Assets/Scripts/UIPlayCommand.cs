@@ -11,6 +11,9 @@ public class UIPlayCommand : MonoBehaviour
     WhileCommand whileInstance;
     GameObject Player;
     public Transform target;
+	public Button submit;
+	public Button clear;
+	GameObject[] editBtn; 
 
 	//Mairim
     //public Button playButton;
@@ -186,6 +189,17 @@ public class UIPlayCommand : MonoBehaviour
 
         btnInstance.i = 0;
         btnInstance.commandList.Clear();
+
+		/* Enable all controls */
+		submit.interactable = true;
+		clear.interactable = true; 
+
+		editBtn = GameObject.FindGameObjectsWithTag ("Edits");
+
+		foreach (GameObject btn in editBtn) {
+			btn.GetComponent<Button>().interactable = true;
+		}
+
         yield return new WaitForFixedUpdate();
     }
 
