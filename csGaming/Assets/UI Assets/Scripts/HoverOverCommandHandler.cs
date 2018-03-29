@@ -7,13 +7,15 @@ using UnityEngine.UI;
 public class HoverOverCommandHandler : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler{
 
 	public GameObject removeButton;
+	public GameObject editButton; 
 
 	#region IPointerEnterHandler implementation
 
 	public void OnPointerEnter (PointerEventData eventData)
 	{
 		removeButton.SetActive (true);
-		Debug.Log ("You have hovered over a command");
+		editButton.SetActive (true);
+		//Debug.Log ("You have hovered over a command");
 	}
 
 	#endregion
@@ -23,6 +25,7 @@ public class HoverOverCommandHandler : MonoBehaviour , IPointerEnterHandler, IPo
 	public void OnPointerExit (PointerEventData eventData)
 	{
 		removeButton.SetActive (false);
+		editButton.SetActive (false);
 	}
 
 	#endregion

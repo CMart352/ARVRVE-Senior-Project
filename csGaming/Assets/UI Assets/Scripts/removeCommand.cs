@@ -22,6 +22,15 @@ public class removeCommand : MonoBehaviour {
 
 	void Remove()
 	{
-		Destroy (commandPrefab);
+		/*Only delete those buttons that were instantiating in order to avoid deleting
+		 * the original prefab */
+		if (commandPrefab.name == "Command(Clone)") {
+			Debug.Log ("You have clicked the delete button");
+			Destroy (this.gameObject);
+		}/*If it is a prefab then make */
+		else {
+			GameObject commandPref = Instantiate (commandPrefab) as GameObject;
+			Destroy (this.gameObject);
+		}
 	}
 }

@@ -11,7 +11,12 @@ public class UIPlayCommand : MonoBehaviour
     WhileCommand whileInstance;
     GameObject Player;
     public Transform target;
-    public Button playButton;
+
+	//Mairim
+    //public Button playButton;
+	//public Transform solutionPanel;
+	//public GameObject player;
+	//Vector3 originalPos;
 
     public Rigidbody playerRigidbody;
     public Animator anim;
@@ -53,11 +58,15 @@ public class UIPlayCommand : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         // playerRigidbody = GetComponent<Rigidbody>();
 
-        Button btn = playButton.GetComponent<Button>();
+        //Button btn = playButton.GetComponent<Button>();
         btnInstance = GetComponent<UIButtonClick>();
         whileInstance = GetComponent<WhileCommand>();
 
-        btn.onClick.AddListener(TaskOnClick);
+        //btn.onClick.AddListener(TaskOnClick);
+
+		//store original position of player
+		//originalPos = player.transform.position;
+
     }
 
     void Animating(float h, float v)
@@ -68,10 +77,34 @@ public class UIPlayCommand : MonoBehaviour
     }
 
 
-    void TaskOnClick()
+    public void TaskOnClick()
     {
-        print("Play button pressed!");
-        StartCoroutine(Execute());
+       /* 
+   		print("Play button pressed!");
+		/*If user had previously clicked the play Button, return player to original position and 
+		 * clear commandList so that when user clicks it again, commands are not duplicated
+		 
+		if (btnInstance.commandList.Count == 0) {  //Solution Panel is empty, add commands to the list
+			foreach (Transform child in solutionPanel) {
+				if (child.name != "Command") { //Original prefab gets ignored
+					btnInstance.commandList.Add (child.name);
+				}
+			StartCoroutine (Execute ());
+			}
+		} else { //Solution panel has commands, return to original position, and retry 
+			btnInstance.commandList.Clear();
+			//Move player to its original position
+			player.transform.position = originalPos;
+			TaskOnClick ();
+		}
+
+		*/
+	
+	foreach (string command in btnInstance.commandList) {
+			Debug.Log (command);
+		}
+		StartCoroutine (Execute ());
+
     }
 
     // Update is called once per frame

@@ -7,10 +7,16 @@ using UnityEngine;
 
 public class UIButtonClick : MonoBehaviour
 {
-    public Button leftButton;
+    /*public Button leftButton;
     public Button rightButton;
     public Button upButton;
     public Button downButton;
+	public Transform solutionPanel;*/
+	public Button submit;
+	public Button clear;
+	public Transform solutionPanel;
+	public GameObject player;
+	Vector3 originalPos;
    // public Button whileButton;
    // public Button methodButton;
 
@@ -53,13 +59,22 @@ public class UIButtonClick : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Button btn = leftButton.GetComponent<Button>();
+        /*Button btn = leftButton.GetComponent<Button>();
         Button btn1 = rightButton.GetComponent<Button>();
         Button btn2 = upButton.GetComponent<Button>();
-        Button btn3 = downButton.GetComponent<Button>();
+        Button btn3 = downButton.GetComponent<Button>();*/
        // Button btn4 = whileButton.GetComponent<Button>();
         //Button btn5 = methodButton.GetComponent<Button>();
 
+		//Mairim
+		Button submitBtn = submit.GetComponent<Button>();
+		submitBtn.onClick.AddListener (SubmitCommands);
+
+		//Record original position of the player 
+		originalPos = player.transform.position;
+
+		//Button clearBtn = clear.GetComponent<Button>();
+		//clearBtn.onClick.AddListener (ClearCommands);
         // methodContainer = GameObject.Find("methodContainer");
 
         commandList = new List<string>();
@@ -71,28 +86,62 @@ public class UIButtonClick : MonoBehaviour
         whileInstance = GetComponent<WhileCommand>();
         methodInstance = GetComponent<MethodCommand>();
 
+		/*
         btn.onClick.AddListener(TaskOnClick);
         btn1.onClick.AddListener(TaskOnClick);
         btn2.onClick.AddListener(TaskOnClick);
-        btn3.onClick.AddListener(TaskOnClick);
+        btn3.onClick.AddListener(TaskOnClick);*/
+		
        // btn4.onClick.AddListener(TaskOnClick);
       //  btn5.onClick.AddListener(TaskOnClick);
     }
 
+	void SubmitCommands()
+	{
+		print("Play button pressed!");
+		/*If user had previously clicked the play Button, return player to original position and 
+		 * clear commandList so that when user clicks it again, commands are not duplicated
+		 */
+		if (commandList.Count == 0) {  //Solution Panel is empty, add commands to the list
+			foreach (Transform child in solutionPanel) {
+				if (child.name != "Command") { //Original prefab gets ignored
+					commandList.Add (child.name);
+				}
+			}
+		} else { //Solution panel has commands, return to original position, and retry 
+			commandList.Clear();
+			//Move player to its original position
+			player.transform.position = originalPos;
+			TaskOnClick ();
+		}
+	}
+
+	/* void ClearCommands()
+	{
+		foreach (Transform child in solutionPanel)
+		{
+			if (child.name != "Command") //Original prefab gets ignored
+			{
+				commandList.Add (child.name);
+			}
+		}
+	} */
+
+
+
     // Update is called once per frame
     void TaskOnClick()
     {
-
-        textObject = EventSystem.current.currentSelectedGameObject;
+		/* textObject = EventSystem.current.currentSelectedGameObject;
 
         string btnText = textObject.GetComponentInChildren<Text>().text;
         Debug.Log("You clicked on " + btnText + " button!");
 
-        /* if ("while()".Equals(btnText) && !whileActive && !panelActive && !methodActive)
+        // if ("while()".Equals(btnText) && !whileActive && !panelActive && !methodActive)
          {
              commandList.Add(btnText);
              i++;
-         }*/
+        // }
         if (!"while()".Equals(btnText) && whileActive && k < 10)
         {
             whileList.Add(btnText);
@@ -121,7 +170,7 @@ public class UIButtonClick : MonoBehaviour
             commandList.Add(btnText);
         }
 
-
+*/
 
     }
 

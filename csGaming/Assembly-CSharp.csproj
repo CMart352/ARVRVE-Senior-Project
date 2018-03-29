@@ -149,11 +149,13 @@
      <Compile Include="Assets\Scripts\RegistrationConfirmation.cs" />
      <Compile Include="Assets\Scripts\SavePlayerData.cs" />
      <Compile Include="Assets\Scripts\SignUp.cs" />
+     <Compile Include="Assets\Scripts\SubmitButtonHandler.cs" />
      <Compile Include="Assets\Scripts\UIButtonClick.cs" />
      <Compile Include="Assets\Scripts\UIPlayCommand.cs" />
      <Compile Include="Assets\Scripts\Validation.cs" />
      <Compile Include="Assets\UI Assets\Scripts\ButtonClick.cs" />
      <Compile Include="Assets\UI Assets\Scripts\CameraSet.cs" />
+     <Compile Include="Assets\UI Assets\Scripts\ClearAllCommands.cs" />
      <Compile Include="Assets\UI Assets\Scripts\CommandHolder.cs" />
      <Compile Include="Assets\UI Assets\Scripts\CommandListCommand.cs" />
      <Compile Include="Assets\UI Assets\Scripts\CommandsListControl.cs" />
