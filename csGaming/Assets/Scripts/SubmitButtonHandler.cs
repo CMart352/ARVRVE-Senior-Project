@@ -37,12 +37,12 @@ public class SubmitButtonHandler : MonoBehaviour {
 		commandExecution = GetComponent<UIPlayCommand> ();
 
 		attempt = 0; 
+
+
 	}
 
 	void AddCommandsToCommandList()
 	{
-		
-
 		/* Return player to original position */
 		player.transform.position = originalPos;
 		player.transform.rotation = originalRot;
@@ -87,13 +87,15 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	}
 
-
-
-
-
-
 	// Update is called once per frame
 	void Update () {
-		
+		print (solutionPanel.transform.childCount);
+		if (solutionPanel.transform.childCount == 1) {
+			submit.interactable = false;
+			clear.interactable = false; 
+		} else {
+			submit.interactable = true;
+			clear.interactable = true; 
+		}
 	}
 }

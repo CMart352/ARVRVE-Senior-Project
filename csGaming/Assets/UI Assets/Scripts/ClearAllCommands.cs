@@ -31,7 +31,7 @@ public class ClearAllCommands : MonoBehaviour {
 		//Delete all of the commands in the solution panel
 		foreach (Transform child in parentTransform)
 		{
-			if (child.name != "Command" || child.name != "RepeatCommandsPanel") //Do not destroy original prefab
+			if (child.name != "Command" && child.name != "RepeatCommandsPanel") //Do not destroy original prefab
 			{
 				Destroy (child.gameObject);
 			}
