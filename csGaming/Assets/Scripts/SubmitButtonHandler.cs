@@ -12,10 +12,9 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	public Button submit;
 	public Button clear;
-	/*public Button upBtn;
-	public Button downBtn;
-	public Button leftBtn;
-	public Button rightBtn;*/
+
+	public Text attempts; 
+	int attempt; 
 
 	GameObject[] editBtn;
 
@@ -36,8 +35,8 @@ public class SubmitButtonHandler : MonoBehaviour {
 		//Create instance of the two player handler classes
 		commandProcessor = GetComponent<UIButtonClick>();
 		commandExecution = GetComponent<UIPlayCommand> ();
-		//commandProcessor = new UIButtonClick();
-		//commandExecution = new UIPlayCommand ();
+
+		attempt = 0; 
 	}
 
 	void AddCommandsToCommandList()
@@ -67,17 +66,17 @@ public class SubmitButtonHandler : MonoBehaviour {
 		/* Disable all controls while character is moving */
 		submit.interactable = false;
 		clear.interactable = false; 
-
-		/*upBtn.interactable = false;
-		downBtn.interactable = false; 
-		leftBtn.interactable = false;
-		rightBtn.interactable = false; */
-
 		editBtn = GameObject.FindGameObjectsWithTag ("Edits");
 
 		foreach (GameObject btn in editBtn) {
 			btn.GetComponent<Button>().interactable = false;
 		}
+
+		/* Increase no of attempts */
+		attempt++;
+
+		attempts.text = attempt.ToString (); 
+
 	}
 
 	void sendCommandsToCharacter()

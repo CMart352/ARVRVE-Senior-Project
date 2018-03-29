@@ -9,7 +9,9 @@ public class SpawnInstructions : MonoBehaviour {
 	public Button moveLeft;
 	public Button moveUp;
 	public Button moveDown;
+	public Button repeat;
 	public GameObject commandPrefab; 
+	public GameObject repeatPrefab; 
 	public string text; 
 
 	//public Canvas background;
@@ -32,6 +34,9 @@ public class SpawnInstructions : MonoBehaviour {
 
 		Button moveDownButton = moveDown.GetComponent<Button>();
 		moveDownButton.onClick.AddListener(MoveDown);
+
+		Button rpt = repeat.GetComponent<Button>();
+		rpt.onClick.AddListener(Loop);
 
 	}
 
@@ -138,6 +143,16 @@ public class SpawnInstructions : MonoBehaviour {
 			command.transform.SetParent (commandPrefab.transform.parent, false);
 
 
+	}
+
+	void Loop()
+	{
+		Debug.Log ("You have clicked the repeat button");
+		GameObject repeatPanel= Instantiate (repeatPrefab) as GameObject;
+		repeatPanel.SetActive (true);
+		//command.name = "MoveDown()";
+		//command.GetComponent<CommandListCommand> ().SetText ("Player.MoveDown()");
+		repeatPanel.transform.SetParent (commandPrefab.transform.parent, false);
 	}
 
 

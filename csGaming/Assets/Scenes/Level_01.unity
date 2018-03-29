@@ -1487,7 +1487,7 @@ GameObject:
   - component: {fileID: 206274617}
   - component: {fileID: 206274616}
   m_Layer: 0
-  m_Name: Text_ResourceAmount
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1548,8 +1548,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4506bf6ca285b494ab0993e12703d5e6, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: fe7a7117a3d6d4f12931be4a95b7156d, type: 3}
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1560,7 +1560,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Attempt
+  m_Text: 
 --- !u!222 &206274618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2407,6 +2407,7 @@ MonoBehaviour:
   player: {fileID: 1743146243}
   submit: {fileID: 971313776}
   clear: {fileID: 101709166}
+  attempts: {fileID: 206274617}
 --- !u!43 &327172796
 Mesh:
   m_ObjectHideFlags: 0
@@ -18876,3 +18877,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 2121850067}
+--- !u!1 &2138160979 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1723618180256340, guid: af3fff3155f734c99b7891a966987e53,
+    type: 2}
+  m_PrefabInternal: {fileID: 1888643287}
+--- !u!114 &2138160981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2138160979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f7a07392b6049259adf0a566d6c884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next: {fileID: 415258045}
