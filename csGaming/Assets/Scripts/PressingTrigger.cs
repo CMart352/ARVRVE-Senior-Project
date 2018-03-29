@@ -52,7 +52,7 @@ public class PressingTrigger : MonoBehaviour {
        // print(cube.transform.position);
         if(cube.transform.position == new Vector3(-4.5F, 9.5f, -1.5f))
         {
-            print("Rotated successfully");
+            //print("Rotated successfully");
             wall.GetComponent<Collider>().enabled = false;
         }
     }

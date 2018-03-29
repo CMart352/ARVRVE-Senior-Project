@@ -7,9 +7,13 @@ public class DiamondPickUp : MonoBehaviour
 {
     public GameObject player;
     public GameObject diamond;
+	ContinueToLevel2 level2;
+
+
 	// Use this for initialization
 	void Start () {
-		
+
+		level2 = GetComponent<ContinueToLevel2> ();
 	}
 
     static void DoBeep()
@@ -17,12 +21,17 @@ public class DiamondPickUp : MonoBehaviour
         EditorApplication.Beep();
     }
 
-    private void OnTriggerEnter(Collider other)
+	/* Player picks up the key */
+    private void OnTriggerEnter(Collider coll)
     {
-        if(other.gameObject == player)
+		coll = GetComponent<Collider> ();
+
+        if(coll.gameObject == player)
         {
             DoBeep();
             diamond.SetActive(false);
+			print ("Key has been picked up");
+			level2.displayPopUp ();
         }
     }
 

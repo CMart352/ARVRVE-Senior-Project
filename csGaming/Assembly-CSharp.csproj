@@ -137,6 +137,7 @@
      <Compile Include="Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\Triangles.cs" />
      <Compile Include="Assets\Scripts\AuthenticatePlayer.cs" />
      <Compile Include="Assets\Scripts\BlocksRotator.cs" />
+     <Compile Include="Assets\Scripts\ContinueToLevel2.cs" />
      <Compile Include="Assets\Scripts\CubeTrigger.cs" />
      <Compile Include="Assets\Scripts\DiamondPickUp.cs" />
      <Compile Include="Assets\Scripts\DiamondRotation.cs" />
