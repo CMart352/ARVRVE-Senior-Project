@@ -51,9 +51,13 @@ public class SpawnInstructions : MonoBehaviour {
 			Debug.Log ("Empty");
 			commandPrefab.GetComponent<CommandListCommand> ().SetText ("Player.MoveRight()");
 			text = "Not empty";
+			GameObject command = Instantiate (commandPrefab) as GameObject;
+			command.SetActive (true);
+			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveRight()");
+			command.transform.SetParent (commandPrefab.transform.parent, false);
 		} else {
 			GameObject command = Instantiate (commandPrefab) as GameObject;
-			commandPrefab.SetActive (true);
+			command.SetActive (true);
 			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveRight()");
 			command.transform.SetParent (commandPrefab.transform.parent, false);
 		}
@@ -70,9 +74,13 @@ public class SpawnInstructions : MonoBehaviour {
 			Debug.Log ("Empty");
 			commandPrefab.GetComponent<CommandListCommand> ().SetText ("Player.MoveLeft()");
 			text = "Not empty";
+			GameObject command = Instantiate (commandPrefab) as GameObject;
+			command.SetActive (true);
+			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveLeft()");
+			command.transform.SetParent (commandPrefab.transform.parent, false);
 		} else {
 			GameObject command = Instantiate (commandPrefab) as GameObject;
-			commandPrefab.SetActive (true);
+			command.SetActive (true);
 			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveLeft()");
 			command.transform.SetParent (commandPrefab.transform.parent, false);
 		}
@@ -89,9 +97,13 @@ public class SpawnInstructions : MonoBehaviour {
 			Debug.Log ("Empty");
 			commandPrefab.GetComponent<CommandListCommand> ().SetText ("Player.MoveUp()");
 			text = "Not empty";
+			GameObject command = Instantiate (commandPrefab) as GameObject;
+			command.SetActive (true);
+			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveUp()");
+			command.transform.SetParent (commandPrefab.transform.parent, false);
 		} else {
 			GameObject command = Instantiate (commandPrefab) as GameObject;
-			commandPrefab.SetActive (true);
+			command.SetActive (true);
 			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveUp()");
 			command.transform.SetParent (commandPrefab.transform.parent, false);
 		}
@@ -107,11 +119,16 @@ public class SpawnInstructions : MonoBehaviour {
 			Debug.Log ("Empty");
 			commandPrefab.GetComponent<CommandListCommand> ().SetText ("Player.MoveDown()");
 			text = "Not empty";
-		} else {
 			GameObject command = Instantiate (commandPrefab) as GameObject;
-			commandPrefab.SetActive (true);
+			command.SetActive (true);
 			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveDown()");
 			command.transform.SetParent (commandPrefab.transform.parent, false);
+		} else {
+			GameObject command = Instantiate (commandPrefab) as GameObject;
+			command.SetActive (true);
+			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveDown()");
+			command.transform.SetParent (commandPrefab.transform.parent, false);
+
 		}
 	}
 
