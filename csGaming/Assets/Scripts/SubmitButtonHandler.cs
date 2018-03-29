@@ -30,6 +30,8 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	void AddCommandsToCommandList()
 	{
+		player.transform.position = originalPos;
+
 		/*If user had previously clicked the play Button, return player to original position and 
 		 * clear commandList so that when user clicks it again, commands are not duplicated
 		 */
@@ -43,7 +45,6 @@ public class SubmitButtonHandler : MonoBehaviour {
 		} else { //Solution panel has commands, return to original position, and retry 
 			commandProcessor.commandList.Clear();
 			//Move player to its original position
-			player.transform.position = originalPos;
 			AddCommandsToCommandList();
 		}
 	}
