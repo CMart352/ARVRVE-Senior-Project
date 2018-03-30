@@ -29,18 +29,18 @@ MonoBehaviour:
     m_Settings:
       excludeSkybox: 1
   antialiasing:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       method: 0
       fxaaSettings:
         preset: 2
       taaSettings:
-        jitterSpread: 0.75
-        sharpen: 0.3
-        stationaryBlending: 0.95
-        motionBlending: 0.85
+        jitterSpread: 0.707
+        sharpen: 0.37
+        stationaryBlending: 0.143
+        motionBlending: 0.766
   ambientOcclusion:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       intensity: 1
       radius: 0.3
@@ -56,10 +56,10 @@ MonoBehaviour:
         blendType: 0
         reflectionQuality: 2
         maxDistance: 100
-        iterationCount: 810
-        stepSize: 3
-        widthModifier: 0.5
-        reflectionBlur: 1
+        iterationCount: 591
+        stepSize: 2
+        widthModifier: 0.01
+        reflectionBlur: 4.26
         reflectBackfaces: 0
       intensity:
         reflectionMultiplier: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
   motionBlur:
     m_Enabled: 0
     m_Settings:
-      shutterAngle: 0
+      shutterAngle: 150
       sampleCount: 4
       frameBlending: 1
   eyeAdaptation:

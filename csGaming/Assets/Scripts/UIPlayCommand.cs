@@ -76,7 +76,8 @@ public class UIPlayCommand : MonoBehaviour
     {
         bool walking = (h != 0 || v != 0);
 
-        anim.SetBool("Moving", walking);
+        // anim.SetBool("Moving", walking); //animation for old player
+        anim.SetBool("isWalking", walking); //animation for Liam
     }
 
 
@@ -147,11 +148,12 @@ public class UIPlayCommand : MonoBehaviour
         }
     }
 
+    //simple movement of the character
     public IEnumerator Execute()
     {
         foreach (string command in btnInstance.commandList)
         {
-            if (command.Equals("MoveLeft()"))
+            if (command.Equals("MoveLeft()")) 
             {
                 Debug.Log("moveLeft command issued.");
                 haxis += -1;
@@ -203,6 +205,7 @@ public class UIPlayCommand : MonoBehaviour
         yield return new WaitForFixedUpdate();
     }
 
+    //loop method 
     public IEnumerator ExecuteLoop()
     {
         int i = 0;
@@ -360,6 +363,7 @@ public class UIPlayCommand : MonoBehaviour
         yield return null;
     }
 
+    //actual movement of the player 
     public IEnumerator Move(Transform transform)
     {
         isMoving = true;

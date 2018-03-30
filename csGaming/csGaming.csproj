@@ -14,6 +14,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile></TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
@@ -336,6 +337,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\[Akishaqs] Liam\Demo\Rotate.cs" />
     <Compile Include="Assets\GameSparks\GameSparksRTUnity.cs" />
     <Compile Include="Assets\GameSparks\GameSparksSettings.cs" />
     <Compile Include="Assets\GameSparks\GameSparksUnity.cs" />
@@ -422,6 +424,7 @@
     <Compile Include="Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\Scripts\AuthenticatePlayer.cs" />
     <Compile Include="Assets\Scripts\BlocksRotator.cs" />
+    <Compile Include="Assets\Scripts\ContinueToLevel2.cs" />
     <Compile Include="Assets\Scripts\CubeTrigger.cs" />
     <Compile Include="Assets\Scripts\DiamondPickUp.cs" />
     <Compile Include="Assets\Scripts\DiamondRotation.cs" />
@@ -435,11 +438,13 @@
     <Compile Include="Assets\Scripts\RegistrationConfirmation.cs" />
     <Compile Include="Assets\Scripts\SavePlayerData.cs" />
     <Compile Include="Assets\Scripts\SignUp.cs" />
+    <Compile Include="Assets\Scripts\SubmitButtonHandler.cs" />
     <Compile Include="Assets\Scripts\UIButtonClick.cs" />
     <Compile Include="Assets\Scripts\UIPlayCommand.cs" />
     <Compile Include="Assets\Scripts\Validation.cs" />
     <Compile Include="Assets\UI Assets\Scripts\ButtonClick.cs" />
     <Compile Include="Assets\UI Assets\Scripts\CameraSet.cs" />
+    <Compile Include="Assets\UI Assets\Scripts\ClearAllCommands.cs" />
     <Compile Include="Assets\UI Assets\Scripts\CommandHolder.cs" />
     <Compile Include="Assets\UI Assets\Scripts\CommandListCommand.cs" />
     <Compile Include="Assets\UI Assets\Scripts\CommandsListControl.cs" />
@@ -448,6 +453,7 @@
     <Compile Include="Assets\UI Assets\Scripts\DigitalClock.cs" />
     <Compile Include="Assets\UI Assets\Scripts\DisplayEdit_RemoveButtons.cs" />
     <Compile Include="Assets\UI Assets\Scripts\HoverOverCommandHandler.cs" />
+    <Compile Include="Assets\UI Assets\Scripts\LoadNexLevel.cs" />
     <Compile Include="Assets\UI Assets\Scripts\MethodCommand.cs" />
     <Compile Include="Assets\UI Assets\Scripts\MethodConfirm.cs" />
     <Compile Include="Assets\UI Assets\Scripts\MethodLoopParameters.cs" />
