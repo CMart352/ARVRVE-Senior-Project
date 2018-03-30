@@ -77,7 +77,8 @@ public class UIPlayCommand : MonoBehaviour
     {
         bool walking = (h != 0 || v != 0);
 
-        anim.SetBool("Moving", walking);
+        //anim.SetBool("Moving", walking);
+		anim.SetBool("isWalking", walking);
     }
 
 
