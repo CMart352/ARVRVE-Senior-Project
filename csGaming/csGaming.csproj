@@ -469,6 +469,9 @@
     <Compile Include="Assets\UI Assets\Scripts\WhileCommand.cs" />
     <Compile Include="Assets\UI Assets\Scripts\WhileLoopConfirm.cs" />
     <Compile Include="Assets\UI Assets\Simple UI\Samples\IconPreview.cs" />
+    <Compile Include="Assets\Xbot characer\Node.cs" />
+    <Compile Include="Assets\Xbot characer\PathFollower.cs" />
+    <Compile Include="Assets\Xbot characer\xbotAnimController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GameSparks\Plugins\GameSparks.Api.XML" />

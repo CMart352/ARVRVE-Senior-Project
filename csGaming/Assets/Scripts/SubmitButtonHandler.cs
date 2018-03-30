@@ -62,15 +62,16 @@ public class SubmitButtonHandler : MonoBehaviour {
 			AddCommandsToCommandList();
 		}
 
-		/* Disable all controls while character is moving */
-		submit.interactable = false;
+        /* Disable all controls while character is moving */
+        print("Should be interactable: " + submit.interactable);
+        submit.interactable = false;
 		clear.interactable = false; 
 		editBtn = GameObject.FindGameObjectsWithTag ("Edits");
 
 		foreach (GameObject btn in editBtn) {
 			btn.GetComponent<Button>().interactable = false;
 		}
-
+        print("Should not be interactable: " + submit.interactable);
 		/* Increase no of attempts */
 		attempt++;
 

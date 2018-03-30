@@ -12,8 +12,7 @@ public class SpawnInstructions : MonoBehaviour {
 	public Button repeat;
 	public GameObject commandPrefab; 
 	public GameObject repeatPrefab; 
-	public string text; 
-
+	public string text;
 	//public Canvas background;
 	//public Button commands;
 	//public Button[] removeButtons;
@@ -77,6 +76,7 @@ public class SpawnInstructions : MonoBehaviour {
 	public void MoveLeft()
 	{
 		Debug.Log ("You have clicked the move left button");
+
 		//text field will only be empty at the beginning of the game, after the first
 		//command has been printed, text field will be populated and mark that the first
 		//command button's text has been filled
@@ -101,6 +101,7 @@ public class SpawnInstructions : MonoBehaviour {
 	public void MoveUp()
 	{
 		Debug.Log ("You have clicked the move up button");
+
 		//text field will only be empty at the beginning of the game, after the first
 		//command has been printed, text field will be populated and mark that the first
 		//command button's text has been filled
@@ -124,6 +125,7 @@ public class SpawnInstructions : MonoBehaviour {
 	void MoveDown()
 	{
 		Debug.Log ("You have clicked the move down button");
+
 		//text field will only be empty at the beginning of the game, after the first
 		//command has been printed, text field will be populated and mark that the first
 		//command button's text has been filled

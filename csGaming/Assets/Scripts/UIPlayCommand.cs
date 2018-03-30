@@ -9,6 +9,7 @@ public class UIPlayCommand : MonoBehaviour
 {
     UIButtonClick btnInstance;
     WhileCommand whileInstance;
+    SpawnInstructions spawn;
     GameObject Player;
     public Transform target;
     public Button submit;
@@ -65,7 +66,7 @@ public class UIPlayCommand : MonoBehaviour
         //Button btn = playButton.GetComponent<Button>();
         btnInstance = GetComponent<UIButtonClick>();
         whileInstance = GetComponent<WhileCommand>();
-
+        spawn = GetComponent<SpawnInstructions>();
         //btn.onClick.AddListener(TaskOnClick);
 
         //store original position of player
@@ -292,7 +293,7 @@ public class UIPlayCommand : MonoBehaviour
         {
             btn.GetComponent<Button>().interactable = true;
         }
-
+        //spawn.flag = 0;
         yield return new WaitForFixedUpdate();
     }
 
