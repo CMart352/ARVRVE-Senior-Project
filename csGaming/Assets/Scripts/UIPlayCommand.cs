@@ -11,15 +11,15 @@ public class UIPlayCommand : MonoBehaviour
     WhileCommand whileInstance;
     GameObject Player;
     public Transform target;
-	public Button submit;
-	public Button clear;
-	GameObject[] editBtn; 
+    public Button submit;
+    public Button clear;
+    GameObject[] editBtn;
 
-	//Mairim
+    //Mairim
     //public Button playButton;
-	//public Transform solutionPanel;
-	//public GameObject player;
-	//Vector3 originalPos;
+    //public Transform solutionPanel;
+    //public GameObject player;
+    //Vector3 originalPos;
 
     public Rigidbody playerRigidbody;
     public Animator anim;
@@ -29,6 +29,7 @@ public class UIPlayCommand : MonoBehaviour
 
     int floormask;
     int loopCount;
+    int direction = 0;
     float camRayLength = 100f;
 
     private float moveSpeed = 3f;
@@ -50,7 +51,7 @@ public class UIPlayCommand : MonoBehaviour
     private float t;
     private List<string> whileList = new List<string>();
 
-    private float rotation = 0f;
+    public float rotation = 0f;
     private Quaternion qTo = Quaternion.identity;
 
     // Use this for initialization
@@ -67,8 +68,8 @@ public class UIPlayCommand : MonoBehaviour
 
         //btn.onClick.AddListener(TaskOnClick);
 
-		//store original position of player
-		//originalPos = player.transform.position;
+        //store original position of player
+        //originalPos = player.transform.position;
 
     }
 
@@ -76,38 +77,38 @@ public class UIPlayCommand : MonoBehaviour
     {
         bool walking = (h != 0 || v != 0);
 
-        // anim.SetBool("Moving", walking); //animation for old player
-        anim.SetBool("isWalking", walking); //animation for Liam
+        anim.SetBool("Moving", walking);
     }
 
 
     public void TaskOnClick()
     {
-       /* 
-   		print("Play button pressed!");
-		/*If user had previously clicked the play Button, return player to original position and 
-		 * clear commandList so that when user clicks it again, commands are not duplicated
-		 
-		if (btnInstance.commandList.Count == 0) {  //Solution Panel is empty, add commands to the list
-			foreach (Transform child in solutionPanel) {
-				if (child.name != "Command") { //Original prefab gets ignored
-					btnInstance.commandList.Add (child.name);
-				}
-			StartCoroutine (Execute ());
-			}
-		} else { //Solution panel has commands, return to original position, and retry 
-			btnInstance.commandList.Clear();
-			//Move player to its original position
-			player.transform.position = originalPos;
-			TaskOnClick ();
-		}
+        /* 
+         print("Play button pressed!");
+         /*If user had previously clicked the play Button, return player to original position and 
+          * clear commandList so that when user clicks it again, commands are not duplicated
 
-		*/
-	
-	foreach (string command in btnInstance.commandList) {
-			Debug.Log (command);
-		}
-		StartCoroutine (Execute ());
+         if (btnInstance.commandList.Count == 0) {  //Solution Panel is empty, add commands to the list
+             foreach (Transform child in solutionPanel) {
+                 if (child.name != "Command") { //Original prefab gets ignored
+                     btnInstance.commandList.Add (child.name);
+                 }
+             StartCoroutine (Execute ());
+             }
+         } else { //Solution panel has commands, return to original position, and retry 
+             btnInstance.commandList.Clear();
+             //Move player to its original position
+             player.transform.position = originalPos;
+             TaskOnClick ();
+         }
+
+         */
+
+        foreach (string command in btnInstance.commandList)
+        {
+            Debug.Log(command);
+        }
+        StartCoroutine(Execute());
 
     }
 
@@ -139,7 +140,7 @@ public class UIPlayCommand : MonoBehaviour
 
             if (input != Vector2.zero)
             {
-                StartCoroutine(Move(Player.transform));
+                StartCoroutine(Move(Player.transform, direction));
             }
         }
         else
@@ -148,12 +149,11 @@ public class UIPlayCommand : MonoBehaviour
         }
     }
 
-    //simple movement of the character
     public IEnumerator Execute()
     {
         foreach (string command in btnInstance.commandList)
         {
-            if (command.Equals("MoveLeft()")) 
+            /*if (command.Equals("MoveLeft()"))
             {
                 Debug.Log("moveLeft command issued.");
                 haxis += -1;
@@ -186,26 +186,115 @@ public class UIPlayCommand : MonoBehaviour
             {
                 print("method found " + command);
                 yield return StartCoroutine(ExecuteMethod(command));
+            }*/
+            if (command.Equals("MoveLeft()"))
+            {
+                Debug.Log("moveLeft command issued.");
+                //haxis += -1;
+                //vaxis += 0;
+                rotation = -90f;
+
+                Player.transform.Rotate(new Vector3(0, rotation, 0));
+                rotation = Player.transform.localRotation.eulerAngles.y / 90;
+                print("Rotation equals: " + Player.transform.rotation.y);
+                yield return new WaitForSeconds(1f);
+            }
+            else if (command.Equals("MoveRight()"))
+            {
+                //haxis += 1;
+                //vaxis += 0;
+                rotation = 90f;
+                Player.transform.Rotate(new Vector3(0, rotation, 0));
+                rotation = Player.transform.localRotation.eulerAngles.y / 90;
+                print("Rotation equals: " + (Player.transform.localRotation.eulerAngles.y / 90));
+                yield return new WaitForSeconds(1f);
+            }
+            else if (command.Equals("MoveUp()"))
+            {
+                // haxis += 0;
+                // vaxis += 1;
+                //float rot = Player.transform.localRotation.eulerAngles.y / 90;
+                //print("Current rotation is: " + rot);
+                if (rotation > 3f || rotation <= 0.5f) //move up 
+                {
+                    haxis += 0;
+                    vaxis += 1;
+                }
+                else if (rotation >= 0f && rotation <= 1f) //Move right
+                {
+                    haxis += 1;
+                    vaxis += 0;
+                }
+                else if (rotation > 1f && rotation <= 2f) //Move Left
+                {
+                    haxis += 0;
+                    vaxis += -1;
+                }
+                else if (rotation > 2f && rotation <= 3f) //Move down
+                {
+                    haxis += -1;
+                    vaxis += 0;
+                }
+                // Player.transform.position += Player.transform.forward ;
+                yield return new WaitForSeconds(1f);
+            }
+            else if (command.Equals("MoveDown()"))
+            {
+                //haxis += 0;
+                //vaxis += -1;
+                //print("Current rotation is: " + rotation);
+                //float rot = Player.transform.localRotation.eulerAngles.y / 90;
+                //print("Current rotation is: " + rot);
+                if (rotation > 3f || rotation <= 0.5f) //Move down
+                {
+                    haxis += 0;
+                    vaxis += -1;
+                }
+                else if (rotation >= 0f && rotation <= 1f) //Move Left
+                {
+                    haxis += -1;
+                    vaxis += 0;
+                }
+                else if (rotation > 1f && rotation <= 2f) //Move Right
+                {
+                    haxis += 0;
+                    vaxis += 1;
+                }
+                else if (rotation > 2f && rotation <= 3f) //Move Up
+                {
+                    haxis += 1;
+                    vaxis += 0;
+                }
+                yield return new WaitForSeconds(1f);
+            }
+            else if (command.Equals("while()"))
+            {
+                yield return StartCoroutine(ExecuteLoop());
+            }
+            else
+            {
+                print("method found " + command);
+                yield return StartCoroutine(ExecuteMethod(command));
             }
         }
 
         btnInstance.i = 0;
         btnInstance.commandList.Clear();
 
-		/* Enable all controls */
-		submit.interactable = true;
-		clear.interactable = true; 
+        /* Enable all controls */
+        submit.interactable = true;
+        clear.interactable = true;
 
-		editBtn = GameObject.FindGameObjectsWithTag ("Edits");
+        editBtn = GameObject.FindGameObjectsWithTag("Edits");
 
-		foreach (GameObject btn in editBtn) {
-			btn.GetComponent<Button>().interactable = true;
-		}
+        foreach (GameObject btn in editBtn)
+        {
+            btn.GetComponent<Button>().interactable = true;
+        }
 
         yield return new WaitForFixedUpdate();
     }
 
-    //loop method 
     public IEnumerator ExecuteLoop()
     {
         int i = 0;
@@ -218,7 +307,7 @@ public class UIPlayCommand : MonoBehaviour
             foreach (string command in btnInstance.jaggedWhileList[0])
             {
                 print("current command = " + command);
-                if (command.Equals("moveLeft()"))
+                /*if (command.Equals("moveLeft()"))
                 {
                     Debug.Log("moveLeft command issued.");
                     haxis += -1;
@@ -247,12 +336,90 @@ public class UIPlayCommand : MonoBehaviour
                 {
                     print("Method found");
                     yield return StartCoroutine(ExecuteMethod(command));
-                }
+                }*/
                 /* else if (command.Equals("while()"))
                  {
                      StartCoroutine(ExecuteLoop());
                      yield return new WaitForSeconds((btnInstance.k) * whileInstance.n + 1);
                  }*/
+                if (command.Equals("MoveLeft()"))
+                {
+                    Debug.Log("moveLeft command issued.");
+                    //haxis += -1;
+                    //vaxis += 0;
+                    rotation = -90f;
+
+                    Player.transform.Rotate(new Vector3(0, rotation, 0));
+                    print("Rotation equals: " + Player.transform.rotation.y);
+                    yield return new WaitForSeconds(1f);
+                }
+                else if (command.Equals("MoveRight()"))
+                {
+                    //haxis += 1;
+                    //vaxis += 0;
+                    rotation = 90f;
+                    Player.transform.Rotate(new Vector3(0, rotation, 0));
+                    print("Rotation equals: " + (Player.transform.localRotation.eulerAngles.y / 90));
+                    yield return new WaitForSeconds(1f);
+                }
+                else if (command.Equals("MoveUp()"))
+                {
+                    // haxis += 0;
+                    // vaxis += 1;
+                    float rot = Player.transform.localRotation.eulerAngles.y / 90;
+                    print("Current rotation is: " + rotation);
+                    if (rot > 3f || rot <= 0.5f) //move up 
+                    {
+                        haxis += 0;
+                        vaxis += 1;
+                    }
+                    else if (rot >= 0f && rot <= 1f) //Move right
+                    {
+                        haxis += 1;
+                        vaxis += 0;
+                    }
+                    else if (rot >= 1f && rot <= 2f) //Move Left
+                    {
+                        haxis += 0;
+                        vaxis += -1;
+                    }
+                    else if (rot >= 2f && rot <= 3f) //Move down
+                    {
+                        haxis += -1;
+                        vaxis += 0;
+                    }
+                    // Player.transform.position += Player.transform.forward ;
+                    yield return new WaitForSeconds(1f);
+                }
+                else if (command.Equals("MoveDown()"))
+                {
+                    //haxis += 0;
+                    //vaxis += -1;
+                    //print("Current rotation is: " + rotation);
+                    float rot = Player.transform.localRotation.eulerAngles.y / 90;
+                    print("Current rotation is: " + rotation);
+                    if (rot > 3f || rot <= 0.5f) //Move down
+                    {
+                        haxis += 0;
+                        vaxis += -1;
+                    }
+                    else if (rot >= 0f && rot <= 1f) //Move Left
+                    {
+                        haxis += -1;
+                        vaxis += 0;
+                    }
+                    else if (rot >= 1f && rot <= 2f) //Move Right
+                    {
+                        haxis += 0;
+                        vaxis += 1;
+                    }
+                    else if (rot >= 2f && rot <= 3f) //Move Up
+                    {
+                        haxis += 1;
+                        vaxis += 0;
+                    }
+                    yield return new WaitForSeconds(1f);
+                }
             }
             i++;
         }
@@ -272,7 +439,7 @@ public class UIPlayCommand : MonoBehaviour
 
         foreach (string command in commands)
         {
-            if (command.Equals("moveLeft()"))
+            /*if (command.Equals("moveLeft()"))
             {
                 Debug.Log("moveLeft command issued.");
                 haxis += -1;
@@ -300,6 +467,84 @@ public class UIPlayCommand : MonoBehaviour
             else if (command.Equals("while()"))
             {
                 yield return StartCoroutine(ExecuteMethodLoop(methodName));
+            }*/
+            if (command.Equals("MoveLeft()"))
+            {
+                Debug.Log("moveLeft command issued.");
+                //haxis += -1;
+                //vaxis += 0;
+                rotation = -90f;
+
+                Player.transform.Rotate(new Vector3(0, rotation, 0));
+                print("Rotation equals: " + Player.transform.rotation.y);
+                yield return new WaitForSeconds(1f);
+            }
+            else if (command.Equals("MoveRight()"))
+            {
+                //haxis += 1;
+                //vaxis += 0;
+                rotation = 90f;
+                Player.transform.Rotate(new Vector3(0, rotation, 0));
+                print("Rotation equals: " + (Player.transform.localRotation.eulerAngles.y / 90));
+                yield return new WaitForSeconds(1f);
+            }
+            else if (command.Equals("MoveUp()"))
+            {
+                // haxis += 0;
+                // vaxis += 1;
+                float rot = Player.transform.localRotation.eulerAngles.y / 90;
+                print("Current rotation is: " + rotation);
+                if (rot >= 3f || rot <= 0.5f) //move up 
+                {
+                    haxis += 0;
+                    vaxis += 1;
+                }
+                else if (rot >= 0f && rot <= 1f) //Move right
+                {
+                    haxis += 1;
+                    vaxis += 0;
+                }
+                else if (rot >= 1f && rot <= 2f) //Move Left
+                {
+                    haxis += 0;
+                    vaxis += -1;
+                }
+                else if (rot >= 2f && rot <= 3f) //Move down
+                {
+                    haxis += -1;
+                    vaxis += 0;
+                }
+                // Player.transform.position += Player.transform.forward ;
+                yield return new WaitForSeconds(1f);
+            }
+            else if (command.Equals("MoveDown()"))
+            {
+                //haxis += 0;
+                //vaxis += -1;
+                //print("Current rotation is: " + rotation);
+                float rot = Player.transform.localRotation.eulerAngles.y / 90;
+                print("Current rotation is: " + rotation);
+                if (rot >= 3f || rot <= 0.5f) //Move down
+                {
+                    haxis += 0;
+                    vaxis += -1;
+                }
+                else if (rot >= 0f && rot <= 1f) //Move Left
+                {
+                    haxis += -1;
+                    vaxis += 0;
+                }
+                else if (rot >= 1f && rot <= 2f) //Move Right
+                {
+                    haxis += 0;
+                    vaxis += 1;
+                }
+                else if (rot >= 2f && rot <= 3f) //Move Up
+                {
+                    haxis += 1;
+                    vaxis += 0;
+                }
+                yield return new WaitForSeconds(1f);
             }
         }
         yield return null;
@@ -329,7 +574,7 @@ public class UIPlayCommand : MonoBehaviour
             while (i < currentLoopCount)
             {
                 print("command is " + s);
-                if (s.Equals("moveLeft()"))
+                /*if (s.Equals("moveLeft()"))
                 {
                     haxis += -1;
                     vaxis += 0;
@@ -352,6 +597,84 @@ public class UIPlayCommand : MonoBehaviour
                     haxis += 0;
                     vaxis += -1;
                     yield return new WaitForSeconds(1f);
+                }*/
+                if (s.Equals("MoveLeft()"))
+                {
+                    Debug.Log("moveLeft command issued.");
+                    //haxis += -1;
+                    //vaxis += 0;
+                    rotation = -90f;
+
+                    Player.transform.Rotate(new Vector3(0, rotation, 0));
+                    print("Rotation equals: " + Player.transform.rotation.y);
+                    yield return new WaitForSeconds(1f);
+                }
+                else if (s.Equals("MoveRight()"))
+                {
+                    //haxis += 1;
+                    //vaxis += 0;
+                    rotation = 90f;
+                    Player.transform.Rotate(new Vector3(0, rotation, 0));
+                    print("Rotation equals: " + (Player.transform.localRotation.eulerAngles.y / 90));
+                    yield return new WaitForSeconds(1f);
+                }
+                else if (s.Equals("MoveUp()"))
+                {
+                    // haxis += 0;
+                    // vaxis += 1;
+                    float rot = Player.transform.localRotation.eulerAngles.y / 90;
+                    print("Current rotation is: " + rotation);
+                    if (rot >= 3f || rot <= 0.5f) //move up 
+                    {
+                        haxis += 0;
+                        vaxis += 1;
+                    }
+                    else if (rot >= 0f && rot <= 1f) //Move right
+                    {
+                        haxis += 1;
+                        vaxis += 0;
+                    }
+                    else if (rot >= 1f && rot <= 2f) //Move Left
+                    {
+                        haxis += 0;
+                        vaxis += -1;
+                    }
+                    else if (rot >= 2f && rot <= 3f) //Move down
+                    {
+                        haxis += -1;
+                        vaxis += 0;
+                    }
+                    // Player.transform.position += Player.transform.forward ;
+                    yield return new WaitForSeconds(1f);
+                }
+                else if (s.Equals("MoveDown()"))
+                {
+                    //haxis += 0;
+                    //vaxis += -1;
+                    //print("Current rotation is: " + rotation);
+                    float rot = Player.transform.localRotation.eulerAngles.y / 90;
+                    print("Current rotation is: " + rotation);
+                    if (rot >= 3f || rot <= 0.5f) //Move down
+                    {
+                        haxis += 0;
+                        vaxis += -1;
+                    }
+                    else if (rot >= 0f && rot <= 1f) //Move Left
+                    {
+                        haxis += -1;
+                        vaxis += 0;
+                    }
+                    else if (rot >= 1f && rot <= 2f) //Move Right
+                    {
+                        haxis += 0;
+                        vaxis += 1;
+                    }
+                    else if (rot >= 2f && rot <= 3f) //Move Up
+                    {
+                        haxis += 1;
+                        vaxis += 0;
+                    }
+                    yield return new WaitForSeconds(1f);
                 }
                 i++;
             }
@@ -363,8 +686,7 @@ public class UIPlayCommand : MonoBehaviour
         yield return null;
     }
 
-    //actual movement of the player 
-    public IEnumerator Move(Transform transform)
+    public IEnumerator Move(Transform transform, int direction)
     {
         isMoving = true;
 
@@ -382,13 +704,15 @@ public class UIPlayCommand : MonoBehaviour
                startPosition.y + System.Math.Sign(input.y) * gridSize, startPosition.z);
         }
 
-        playerRigidbody.transform.LookAt(endPosition);
+
+        //playerRigidbody.transform.LookAt(endPosition);
 
         while (t < 1f)
         {
             t += Time.deltaTime * (moveSpeed / gridSize);
 
             playerRigidbody.transform.position = Vector3.Lerp(startPosition, endPosition, t);
+
 
             yield return null;
         }
@@ -397,6 +721,7 @@ public class UIPlayCommand : MonoBehaviour
         Lock = false;
         haxis = 0;
         vaxis = 0;
+        print("Current rotation is: " + Player.transform.rotation.y);
         yield return 0;
 
     }

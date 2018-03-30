@@ -9,17 +9,17 @@ public class ClearAllCommands : MonoBehaviour {
 	public Transform parentTransform;
 	public GameObject player;
 	Vector3 originalPos;
-	Quaternion originalRot; 
-
-	// Use this for initialization
-	void Start () {
+	Quaternion originalRot;
+    UIPlayCommand commandExecution;
+    // Use this for initialization
+    void Start () {
 
 		Button clearBtn = clearButton.GetComponent<Button>();
 		clearButton.onClick.AddListener(Clear);
 		originalPos = player.transform.position;
 		originalRot = player.transform.rotation;
-		
-	}
+        commandExecution = GetComponent<UIPlayCommand>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -40,6 +40,6 @@ public class ClearAllCommands : MonoBehaviour {
 		//Move player to its original position
 		player.transform.position = originalPos;
 		player.transform.rotation = originalRot;
-
+        commandExecution.rotation = 0f;
 	}
 }

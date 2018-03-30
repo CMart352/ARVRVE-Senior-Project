@@ -31,12 +31,11 @@ public class SubmitButtonHandler : MonoBehaviour {
 		originalPos = player.transform.position;
 		originalRot = player.transform.rotation;
 
-
 		//Create instance of the two player handler classes
 		commandProcessor = GetComponent<UIButtonClick>();
-		commandExecution = GetComponent<UIPlayCommand> ();
+		commandExecution = GetComponent<UIPlayCommand> (); 
 
-		attempt = 0; 
+        attempt = 0; 
 
 
 	}
@@ -46,11 +45,11 @@ public class SubmitButtonHandler : MonoBehaviour {
 		/* Return player to original position */
 		player.transform.position = originalPos;
 		player.transform.rotation = originalRot;
-
-		/*If user had previously clicked the play Button, return player to original position and 
+        commandExecution.rotation = 0f;
+        /*If user had previously clicked the play Button, return player to original position and 
 		 * clear commandList so that when user clicks it again, commands are not duplicated
 		 */
-		if (commandProcessor.commandList.Count == 0) {  //Solution Panel (commandList) is empty, add commands to the list
+        if (commandProcessor.commandList.Count == 0) {  //Solution Panel (commandList) is empty, add commands to the list
 			foreach (Transform child in solutionPanel) {
 				if (child.name != "Command") { //Original prefab gets ignored
 					commandProcessor.commandList.Add (child.name);
@@ -89,7 +88,7 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		print (solutionPanel.transform.childCount);
+		//print (solutionPanel.transform.childCount);
 		if (solutionPanel.transform.childCount == 1) {
 			submit.interactable = false;
 			clear.interactable = false; 
