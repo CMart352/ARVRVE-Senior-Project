@@ -22,18 +22,11 @@ public class Login : MonoBehaviour {
 	public Text playerValidMessage; 
 
 	public void uploadScene() {
-		print ("we are here ");
 		AuthenticatePlayer.AunthenticatePlayerBttn (username, password, "Level_01", playerValidMessage);
 
 	}
 
-
-
-
-
 	void Update () {
-
-		/*allows users to press <tab> to change field*/
 
 		if(Input.GetKeyDown(KeyCode.Tab)){
 			if (Username.GetComponent<InputField> ().isFocused) {

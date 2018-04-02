@@ -2,18 +2,24 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using GameSparks.Core;
 
 public class RegisterPlayer : MonoBehaviour {
 
 	public static void RegisterPlayerBttn(string displayName, string password, string scene,
 										  string email, string fname, string lname, int age,
 										  string gender, string school, string major, string schoolYear, Text textError, 
-		GameObject panel, GameObject start, GameObject goBack, Text succefullReg )
+										  GameObject panel, GameObject start, GameObject goBack, Text succefullReg )
 	{
+
+		GSRequestData sd = new GSRequestData().
+			AddString("email", "c@test.com");
+
 		new GameSparks.Api.Requests.RegistrationRequest ()
 			.SetDisplayName (displayName)
 			.SetUserName (displayName)
 			.SetPassword (password)
+			.SetScriptData(sd)
 			.Send ((response) => {
 					if(!response.HasErrors)
 					{
