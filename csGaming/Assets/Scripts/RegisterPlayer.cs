@@ -13,7 +13,7 @@ public class RegisterPlayer : MonoBehaviour {
 	{
 
 		GSRequestData sd = new GSRequestData().
-			AddString("email", "c@test.com");
+			AddString("email", email);
 
 		new GameSparks.Api.Requests.RegistrationRequest ()
 			.SetDisplayName (displayName)
