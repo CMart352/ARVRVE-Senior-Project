@@ -40,6 +40,6 @@ public class ClearAllCommands : MonoBehaviour {
 		//Move player to its original position
 		player.transform.position = originalPos;
 		player.transform.rotation = originalRot;
-        commandExecution.rotation = 0f;
+        commandExecution.targetAngle = 0f;
 	}
 }

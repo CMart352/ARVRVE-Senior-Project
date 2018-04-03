@@ -36,6 +36,10 @@ public class UIPlayCommand : MonoBehaviour
     private float moveSpeed = 3f;
     private float gridSize = 1f;
 
+    bool isRotating;
+    public float targetAngle;
+    Quaternion targetRotation;
+
     private enum Orientation
     {
         Horizontal,
@@ -71,7 +75,9 @@ public class UIPlayCommand : MonoBehaviour
 
         //store original position of player
         //originalPos = player.transform.position;
-
+        isRotating = false;
+        targetAngle = Player.transform.eulerAngles.y;
+        targetRotation = Quaternion.AngleAxis(targetAngle, Vector3.up);
     }
 
     void Animating(float h, float v)
@@ -105,6 +111,7 @@ public class UIPlayCommand : MonoBehaviour
          }
 
          */
+        targetAngle = 0f;
 
         foreach (string command in btnInstance.commandList)
         {
@@ -125,6 +132,11 @@ public class UIPlayCommand : MonoBehaviour
         {
             playButton.GetComponent<Button>().interactable = true;
         }*/
+
+        if(isRotating)
+        {
+            StartCoroutine(RotateChar(Player.transform));
+        }
 
         if (!isMoving)
         {
@@ -194,45 +206,73 @@ public class UIPlayCommand : MonoBehaviour
                 Debug.Log("moveLeft command issued.");
                 //haxis += -1;
                 //vaxis += 0;
-                rotation = -90f;
-
-                Player.transform.Rotate(new Vector3(0, rotation, 0));
-                rotation = Player.transform.localRotation.eulerAngles.y / 90;
-                print("Rotation equals: " + Player.transform.rotation.y);
+                // rotation = -90f;
+                targetAngle = (targetAngle - 90) % 360;
+                print("TargetAngle = " + targetAngle);
+                isRotating = true;
+                //Player.transform.Rotate(new Vector3(0, rotation, 0));
+                rotation = Player.transform.localRotation.eulerAngles.y;
+                //print("Rotation equals: " + Player.transform.localRotation.eulerAngles.y);
                 yield return new WaitForSeconds(1f);
             }
             else if (command.Equals("MoveRight()"))
             {
                 //haxis += 1;
                 //vaxis += 0;
-                rotation = 90f;
-                Player.transform.Rotate(new Vector3(0, rotation, 0));
-                rotation = Player.transform.localRotation.eulerAngles.y / 90;
-                print("Rotation equals: " + (Player.transform.localRotation.eulerAngles.y / 90));
+                //rotation = 90f;
+                //Player.transform.Rotate(new Vector3(0, rotation, 0));
+                targetAngle = (targetAngle + 90) % 360;
+                isRotating = true;
+                rotation = Player.transform.localRotation.eulerAngles.y;
+                
                 yield return new WaitForSeconds(1f);
             }
             else if (command.Equals("MoveUp()"))
             {
                 // haxis += 0;
                 // vaxis += 1;
-                //float rot = Player.transform.localRotation.eulerAngles.y / 90;
-                //print("Current rotation is: " + rot);
-                if (rotation > 3f || rotation <= 0.5f) //move up 
+                float rot = Player.transform.localRotation.eulerAngles.y;
+                print("Current rotation is: " + rotation);
+                /*if (rot > 0f && rot <= 92f) //Move right
+                {
+                    print("Move right");
+                    haxis += 1;
+                    vaxis += 0;
+                }
+                else if (rot > 92f && rot <= 182f) //Move down
+                {
+                    print("Move down");
+                    haxis += 0;
+                    vaxis += -1;
+                }
+                else if (rot > 182f && rot <= 272f) //Move left
+                {
+                    print("Move left");
+                    haxis += -1;
+                    vaxis += 0;
+                }
+                else if ((rot > 272f && rot <= 362f) || rot == 0f) //Move Up
+                {
+                    print("Move up");
+                    haxis += 0;
+                    vaxis += 1;
+                }*/
+                if(targetAngle == 0)//Move up
                 {
                     haxis += 0;
                     vaxis += 1;
                 }
-                else if (rotation >= 0f && rotation <= 1f) //Move right
+                if(targetAngle == 90 || targetAngle == -270) //Move right
                 {
                     haxis += 1;
                     vaxis += 0;
                 }
-                else if (rotation > 1f && rotation <= 2f) //Move Left
+                if(targetAngle == 180 || targetAngle == -180) //Move Down
                 {
                     haxis += 0;
                     vaxis += -1;
                 }
-                else if (rotation > 2f && rotation <= 3f) //Move down
+                if(targetAngle == 270 || targetAngle == -90) //Move Left
                 {
                     haxis += -1;
                     vaxis += 0;
@@ -245,24 +285,48 @@ public class UIPlayCommand : MonoBehaviour
                 //haxis += 0;
                 //vaxis += -1;
                 //print("Current rotation is: " + rotation);
-                //float rot = Player.transform.localRotation.eulerAngles.y / 90;
-                //print("Current rotation is: " + rot);
-                if (rotation > 3f || rotation <= 0.5f) //Move down
+                float rot = Player.transform.localRotation.eulerAngles.y ;
+                print("Current rotation is: " + rot);
+                /* if (rot > 0f && rot <= 92f) //Move left
+                 {
+                     print("Move left");
+                     haxis += -1;
+                     vaxis += 0;
+                 }
+                 else if (rot > 92f && rot <= 182f) //Move up
+                 {
+                     print("Move up");
+                     haxis += 0;
+                     vaxis += 1;
+                 }
+                 else if (rot > 182f && rot <= 272f) //Move Right
+                 {
+                     print("Move right");
+                     haxis += 1;
+                     vaxis += 0;
+                 }
+                 else if ((rot > 272f && rot <= 362f) || rot == 0f) //Move Down
+                 {
+                     print("Move down");
+                     haxis += 0;
+                     vaxis += -1;
+                 }*/
+                if (targetAngle == 0)//Move Down
                 {
                     haxis += 0;
                     vaxis += -1;
                 }
-                else if (rotation >= 0f && rotation <= 1f) //Move Left
+                if (targetAngle == 90 || targetAngle == -270) //Move left
                 {
                     haxis += -1;
                     vaxis += 0;
                 }
-                else if (rotation > 1f && rotation <= 2f) //Move Right
+                if (targetAngle == 180 || targetAngle == -180) //Move Up
                 {
                     haxis += 0;
                     vaxis += 1;
                 }
-                else if (rotation > 2f && rotation <= 3f) //Move Up
+                if (targetAngle == 270 || targetAngle == -90) //Move right
                 {
                     haxis += 1;
                     vaxis += 0;
@@ -349,19 +413,18 @@ public class UIPlayCommand : MonoBehaviour
                     Debug.Log("moveLeft command issued.");
                     //haxis += -1;
                     //vaxis += 0;
-                    rotation = -90f;
-
-                    Player.transform.Rotate(new Vector3(0, rotation, 0));
-                    print("Rotation equals: " + Player.transform.rotation.y);
+                    targetAngle = (targetAngle - 90) % 360;
+                    print("TargetAngle = " + targetAngle);
+                    isRotating = true;
                     yield return new WaitForSeconds(1f);
                 }
                 else if (command.Equals("MoveRight()"))
                 {
                     //haxis += 1;
                     //vaxis += 0;
-                    rotation = 90f;
-                    Player.transform.Rotate(new Vector3(0, rotation, 0));
-                    print("Rotation equals: " + (Player.transform.localRotation.eulerAngles.y / 90));
+                    targetAngle = (targetAngle + 90) % 360;
+                    isRotating = true;
+                    rotation = Player.transform.localRotation.eulerAngles.y;
                     yield return new WaitForSeconds(1f);
                 }
                 else if (command.Equals("MoveUp()"))
@@ -370,22 +433,22 @@ public class UIPlayCommand : MonoBehaviour
                     // vaxis += 1;
                     float rot = Player.transform.localRotation.eulerAngles.y / 90;
                     print("Current rotation is: " + rotation);
-                    if (rot > 3f || rot <= 0.5f) //move up 
+                    if (targetAngle == 0)//Move up
                     {
                         haxis += 0;
                         vaxis += 1;
                     }
-                    else if (rot >= 0f && rot <= 1f) //Move right
+                    if (targetAngle == 90 || targetAngle == -270) //Move right
                     {
                         haxis += 1;
                         vaxis += 0;
                     }
-                    else if (rot >= 1f && rot <= 2f) //Move Left
+                    if (targetAngle == 180 || targetAngle == -180) //Move Down
                     {
                         haxis += 0;
                         vaxis += -1;
                     }
-                    else if (rot >= 2f && rot <= 3f) //Move down
+                    if (targetAngle == 270 || targetAngle == -90) //Move Left
                     {
                         haxis += -1;
                         vaxis += 0;
@@ -400,22 +463,22 @@ public class UIPlayCommand : MonoBehaviour
                     //print("Current rotation is: " + rotation);
                     float rot = Player.transform.localRotation.eulerAngles.y / 90;
                     print("Current rotation is: " + rotation);
-                    if (rot > 3f || rot <= 0.5f) //Move down
+                    if (targetAngle == 0)//Move Down
                     {
                         haxis += 0;
                         vaxis += -1;
                     }
-                    else if (rot >= 0f && rot <= 1f) //Move Left
+                    if (targetAngle == 90 || targetAngle == -270) //Move left
                     {
                         haxis += -1;
                         vaxis += 0;
                     }
-                    else if (rot >= 1f && rot <= 2f) //Move Right
+                    if (targetAngle == 180 || targetAngle == -180) //Move Up
                     {
                         haxis += 0;
                         vaxis += 1;
                     }
-                    else if (rot >= 2f && rot <= 3f) //Move Up
+                    if (targetAngle == 270 || targetAngle == -90) //Move right
                     {
                         haxis += 1;
                         vaxis += 0;
@@ -475,19 +538,18 @@ public class UIPlayCommand : MonoBehaviour
                 Debug.Log("moveLeft command issued.");
                 //haxis += -1;
                 //vaxis += 0;
-                rotation = -90f;
-
-                Player.transform.Rotate(new Vector3(0, rotation, 0));
-                print("Rotation equals: " + Player.transform.rotation.y);
+                targetAngle = (targetAngle - 90) % 360;
+                print("TargetAngle = " + targetAngle);
+                isRotating = true;
                 yield return new WaitForSeconds(1f);
             }
             else if (command.Equals("MoveRight()"))
             {
                 //haxis += 1;
                 //vaxis += 0;
-                rotation = 90f;
-                Player.transform.Rotate(new Vector3(0, rotation, 0));
-                print("Rotation equals: " + (Player.transform.localRotation.eulerAngles.y / 90));
+                targetAngle = (targetAngle + 90) % 360;
+                isRotating = true;
+                rotation = Player.transform.localRotation.eulerAngles.y;
                 yield return new WaitForSeconds(1f);
             }
             else if (command.Equals("MoveUp()"))
@@ -496,22 +558,22 @@ public class UIPlayCommand : MonoBehaviour
                 // vaxis += 1;
                 float rot = Player.transform.localRotation.eulerAngles.y / 90;
                 print("Current rotation is: " + rotation);
-                if (rot >= 3f || rot <= 0.5f) //move up 
+                if (targetAngle == 0)//Move up
                 {
                     haxis += 0;
                     vaxis += 1;
                 }
-                else if (rot >= 0f && rot <= 1f) //Move right
+                if (targetAngle == 90 || targetAngle == -270) //Move right
                 {
                     haxis += 1;
                     vaxis += 0;
                 }
-                else if (rot >= 1f && rot <= 2f) //Move Left
+                if (targetAngle == 180 || targetAngle == -180) //Move Down
                 {
                     haxis += 0;
                     vaxis += -1;
                 }
-                else if (rot >= 2f && rot <= 3f) //Move down
+                if (targetAngle == 270 || targetAngle == -90) //Move Left
                 {
                     haxis += -1;
                     vaxis += 0;
@@ -526,22 +588,22 @@ public class UIPlayCommand : MonoBehaviour
                 //print("Current rotation is: " + rotation);
                 float rot = Player.transform.localRotation.eulerAngles.y / 90;
                 print("Current rotation is: " + rotation);
-                if (rot >= 3f || rot <= 0.5f) //Move down
+                if (targetAngle == 0)//Move Down
                 {
                     haxis += 0;
                     vaxis += -1;
                 }
-                else if (rot >= 0f && rot <= 1f) //Move Left
+                if (targetAngle == 90 || targetAngle == -270) //Move left
                 {
                     haxis += -1;
                     vaxis += 0;
                 }
-                else if (rot >= 1f && rot <= 2f) //Move Right
+                if (targetAngle == 180 || targetAngle == -180) //Move Up
                 {
                     haxis += 0;
                     vaxis += 1;
                 }
-                else if (rot >= 2f && rot <= 3f) //Move Up
+                if (targetAngle == 270 || targetAngle == -90) //Move right
                 {
                     haxis += 1;
                     vaxis += 0;
@@ -605,19 +667,18 @@ public class UIPlayCommand : MonoBehaviour
                     Debug.Log("moveLeft command issued.");
                     //haxis += -1;
                     //vaxis += 0;
-                    rotation = -90f;
-
-                    Player.transform.Rotate(new Vector3(0, rotation, 0));
-                    print("Rotation equals: " + Player.transform.rotation.y);
+                    targetAngle = (targetAngle - 90) % 360;
+                    print("TargetAngle = " + targetAngle);
+                    isRotating = true;
                     yield return new WaitForSeconds(1f);
                 }
                 else if (s.Equals("MoveRight()"))
                 {
                     //haxis += 1;
                     //vaxis += 0;
-                    rotation = 90f;
-                    Player.transform.Rotate(new Vector3(0, rotation, 0));
-                    print("Rotation equals: " + (Player.transform.localRotation.eulerAngles.y / 90));
+                    targetAngle = (targetAngle + 90) % 360;
+                    isRotating = true;
+                    rotation = Player.transform.localRotation.eulerAngles.y;
                     yield return new WaitForSeconds(1f);
                 }
                 else if (s.Equals("MoveUp()"))
@@ -626,22 +687,22 @@ public class UIPlayCommand : MonoBehaviour
                     // vaxis += 1;
                     float rot = Player.transform.localRotation.eulerAngles.y / 90;
                     print("Current rotation is: " + rotation);
-                    if (rot >= 3f || rot <= 0.5f) //move up 
+                    if (targetAngle == 0)//Move up
                     {
                         haxis += 0;
                         vaxis += 1;
                     }
-                    else if (rot >= 0f && rot <= 1f) //Move right
+                    if (targetAngle == 90 || targetAngle == -270) //Move right
                     {
                         haxis += 1;
                         vaxis += 0;
                     }
-                    else if (rot >= 1f && rot <= 2f) //Move Left
+                    if (targetAngle == 180 || targetAngle == -180) //Move Down
                     {
                         haxis += 0;
                         vaxis += -1;
                     }
-                    else if (rot >= 2f && rot <= 3f) //Move down
+                    if (targetAngle == 270 || targetAngle == -90) //Move Left
                     {
                         haxis += -1;
                         vaxis += 0;
@@ -654,24 +715,24 @@ public class UIPlayCommand : MonoBehaviour
                     //haxis += 0;
                     //vaxis += -1;
                     //print("Current rotation is: " + rotation);
-                    float rot = Player.transform.localRotation.eulerAngles.y / 90;
-                    print("Current rotation is: " + rotation);
-                    if (rot >= 3f || rot <= 0.5f) //Move down
+                    float rot = Player.transform.localRotation.eulerAngles.y/90;
+                    print("Current rotation is: " + rot);
+                    if (targetAngle == 0)//Move Down
                     {
                         haxis += 0;
                         vaxis += -1;
                     }
-                    else if (rot >= 0f && rot <= 1f) //Move Left
+                    if (targetAngle == 90 || targetAngle == -270) //Move left
                     {
                         haxis += -1;
                         vaxis += 0;
                     }
-                    else if (rot >= 1f && rot <= 2f) //Move Right
+                    if (targetAngle == 180 || targetAngle == -180) //Move Up
                     {
                         haxis += 0;
                         vaxis += 1;
                     }
-                    else if (rot >= 2f && rot <= 3f) //Move Up
+                    if (targetAngle == 270 || targetAngle == -90) //Move right
                     {
                         haxis += 1;
                         vaxis += 0;
@@ -723,9 +784,27 @@ public class UIPlayCommand : MonoBehaviour
         Lock = false;
         haxis = 0;
         vaxis = 0;
-        print("Current rotation is: " + Player.transform.rotation.y);
+        //print("Current rotation is: " + Player.transform.rotation.y);
         yield return 0;
 
+    }
+
+    public IEnumerator RotateChar(Transform transform)
+    {
+        targetRotation = Quaternion.AngleAxis(targetAngle, Vector3.up);
+        //print("Target Angle = " + targetAngle);
+        if (Player.transform.rotation != targetRotation)
+        {
+            Player.transform.rotation = Quaternion.Slerp(Player.transform.rotation, targetRotation, 5 * Time.deltaTime);
+        }
+        else
+        {
+            rotation = Player.transform.localRotation.eulerAngles.y;
+            print("Rotation equals: " + rotation);
+            isRotating = false;
+        }
+        
+        yield return 0;
     }
 
     //Work in progress
