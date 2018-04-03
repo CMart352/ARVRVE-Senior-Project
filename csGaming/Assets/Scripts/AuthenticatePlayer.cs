@@ -6,16 +6,15 @@ using UnityEngine.UI;
 
 public class AuthenticatePlayer : MonoBehaviour {
 
-	public static void AunthenticatePlayerBttn(string username, string password, string scene, Text playerTextError) {
+	public static void AunthenticatePlayerBttn(string username, string password, Text playerTextError) {
 		new GameSparks.Api.Requests.AuthenticationRequest().
 			SetUserName(username).
 			SetPassword(password).
 			Send((response) => {
 				if (!response.HasErrors) {
 					Debug.Log("Player Authenticated...");
-					SceneManager.LoadScene(scene);
-
 			    	playerTextError.text = " ";
+					GetLevel.getLevel ();
 				} else {
 					/**Samira, add error messages similar to the ones you created**/
 			

@@ -22,7 +22,7 @@ public class Login : MonoBehaviour {
 	public Text playerValidMessage; 
 
 	public void uploadScene() {
-		AuthenticatePlayer.AunthenticatePlayerBttn (username, password, "Level_01", playerValidMessage);
+		AuthenticatePlayer.AunthenticatePlayerBttn (username, password, playerValidMessage);
 
 	}
 
