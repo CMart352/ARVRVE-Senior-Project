@@ -215,6 +215,9 @@
     <Reference Include="UnityEngine.WindModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook.Unity.Settings">
+      <HintPath>Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -433,15 +436,18 @@
     <Compile Include="Assets\Scripts\KeyRotation.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Login.cs" />
+    <Compile Include="Assets\Scripts\PasswordRecoveryRequest.cs" />
     <Compile Include="Assets\Scripts\PressingTrigger.cs" />
     <Compile Include="Assets\Scripts\RegisterPlayer.cs" />
     <Compile Include="Assets\Scripts\RegistrationConfirmation.cs" />
     <Compile Include="Assets\Scripts\SavePlayerData.cs" />
     <Compile Include="Assets\Scripts\SignUp.cs" />
     <Compile Include="Assets\Scripts\SubmitButtonHandler.cs" />
+    <Compile Include="Assets\Scripts\TransitionScenes.cs" />
     <Compile Include="Assets\Scripts\UIButtonClick.cs" />
     <Compile Include="Assets\Scripts\UIPlayCommand.cs" />
     <Compile Include="Assets\Scripts\Validation.cs" />
+    <Compile Include="Assets\Scripts\WaypointsScript.cs" />
     <Compile Include="Assets\UI Assets\Scripts\ButtonClick.cs" />
     <Compile Include="Assets\UI Assets\Scripts\CameraSet.cs" />
     <Compile Include="Assets\UI Assets\Scripts\ClearAllCommands.cs" />

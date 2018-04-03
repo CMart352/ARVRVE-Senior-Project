@@ -20,9 +20,12 @@ public class LoadNexLevel : MonoBehaviour {
 		
 	}
 
+
 	void NextLevel()
 	{
-		SceneManager.LoadScene ("Level_02");
+        float fadeTime = GameObject.Find("FadeScene").GetComponent<TransitionScenes>().beginFade(1);
+       // yield WaitForSeconds(fadeTime);
+        SceneManager.LoadScene ("Level_02");
 	}
 
 }
