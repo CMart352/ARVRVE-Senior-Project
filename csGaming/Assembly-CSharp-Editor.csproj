@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\WaypointsEditor.cs" />
      <Compile Include="Assets\GameSparks\Editor\GameSparksEditorFormUpload.cs" />
      <Compile Include="Assets\GameSparks\Editor\GameSparksPopUp.cs" />
      <Compile Include="Assets\GameSparks\Editor\GameSparksRestApi.cs" />

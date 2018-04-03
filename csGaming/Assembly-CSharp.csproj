@@ -151,12 +151,15 @@
      <Compile Include="Assets\Scripts\PressingTrigger.cs" />
      <Compile Include="Assets\Scripts\RegisterPlayer.cs" />
      <Compile Include="Assets\Scripts\RegistrationConfirmation.cs" />
+     <Compile Include="Assets\Scripts\SaveLevel.cs" />
      <Compile Include="Assets\Scripts\SavePlayerData.cs" />
      <Compile Include="Assets\Scripts\SignUp.cs" />
      <Compile Include="Assets\Scripts\SubmitButtonHandler.cs" />
+     <Compile Include="Assets\Scripts\TransitionScenes.cs" />
      <Compile Include="Assets\Scripts\UIButtonClick.cs" />
      <Compile Include="Assets\Scripts\UIPlayCommand.cs" />
      <Compile Include="Assets\Scripts\Validation.cs" />
+     <Compile Include="Assets\Scripts\WaypointsScript.cs" />
      <Compile Include="Assets\UI Assets\Scripts\ButtonClick.cs" />
      <Compile Include="Assets\UI Assets\Scripts\CameraSet.cs" />
      <Compile Include="Assets\UI Assets\Scripts\ClearAllCommands.cs" />
