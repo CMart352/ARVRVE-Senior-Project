@@ -6,7 +6,7 @@ using GameSparks.Core;
 
 public class RegisterPlayer : MonoBehaviour {
 
-	public static void RegisterPlayerBttn(string displayName, string password, string scene,
+	public static void RegisterPlayerBttn(string displayName, string password,
 										  string email, string fname, string lname, int age,
 										  string gender, string school, string major, string schoolYear, Text textError, 
 										  GameObject panel, GameObject start, GameObject goBack, Text succefullReg )

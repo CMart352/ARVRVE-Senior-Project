@@ -223,7 +223,7 @@ public class SignUp : MonoBehaviour {
 		if (isUsernameValid && isNameValid && isEmailValid && isPasswordValid && isPasswordConf && isGenderValid
 		    && isSchoolYearValid && isMajorValid && isSchoolValid /* && isLastnameValid */) {
 
-			RegisterPlayer.RegisterPlayerBttn (nickname, password, "Level_01", email, firstname,
+			RegisterPlayer.RegisterPlayerBttn (nickname, password, email, firstname,
 				lastname, Int32.Parse(age), selectedGender,
 				selectedSchool, selectedMajor, selectedSchoolyear, usernameError , panel, start ,goBack, succefullReg);
 			
