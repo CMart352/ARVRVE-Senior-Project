@@ -12,8 +12,11 @@ public class RegisterPlayer : MonoBehaviour {
 										  GameObject panel, GameObject start, GameObject goBack, Text succefullReg )
 	{
 
+
 		GSRequestData sd = new GSRequestData().
-			AddString("email", email);
+			AddString("displayName", displayName).
+			AddString("email", email).
+			AddString ("userName", displayName);
 
 		new GameSparks.Api.Requests.RegistrationRequest ()
 			.SetDisplayName (displayName)
@@ -34,6 +37,9 @@ public class RegisterPlayer : MonoBehaviour {
 
 					    RegistrationConfirmation.Confirmation(panel, start, goBack, succefullReg);
 					    textError.text = " ";
+
+						SaveLevel.saveLevel();
+
 						
 					}
 					else
@@ -45,5 +51,7 @@ public class RegisterPlayer : MonoBehaviour {
 					    textError.color = Color.red;
 					}
 		});
+				
+				
 	}
 }

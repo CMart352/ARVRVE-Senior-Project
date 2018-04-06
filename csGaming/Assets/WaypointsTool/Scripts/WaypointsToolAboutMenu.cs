@@ -55,6 +55,8 @@ namespace WaypointsTool
 
             if (GUILayout.Button("Ok got it!"))
                 Close();
+
+			GUILayout.EndArea ();
         }
 
 

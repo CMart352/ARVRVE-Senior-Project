@@ -5,9 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class SaveLevel : MonoBehaviour {
 
-	public void saveLevel() {
+	public static SaveLevel instance = null;
+
+	void Awake() {
+		if (instance == null) {
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
+		}
+
+		DontDestroyOnLoad (gameObject);
+	}
+
+	public static void saveLevel() {
 		string level = SceneManager.GetActiveScene().name;
 		Debug.Log (level);
+
+		if (level.Equals ("SignUp"))
+			level = "Level_01";
 
 		new GameSparks.Api.Requests.LogEventRequest ()
 			.SetEventKey ("SAVE_LEVEL")
@@ -22,4 +37,6 @@ public class SaveLevel : MonoBehaviour {
 		});
 
 	}
+
+
 }
