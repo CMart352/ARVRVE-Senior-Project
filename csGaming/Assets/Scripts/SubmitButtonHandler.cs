@@ -73,7 +73,7 @@ public class SubmitButtonHandler : MonoBehaviour {
 		}
 
         /* Disable all controls while character is moving */
-        print("Should be interactable: " + submit.interactable);
+//        print("Should be interactable: " + submit.interactable);
 //        submit.interactable = false;
 //		clear.interactable = false; 
 
@@ -83,7 +83,7 @@ public class SubmitButtonHandler : MonoBehaviour {
 			print (btn.GetComponent<Button> ().name);
 			btn.GetComponent<Button>().interactable = false;
 		}
-        print("Should not be interactable: " + submit.interactable);
+//        print("Should not be interactable: " + submit.interactable);
 		/* Increase no of attempts */
 		attempt++;
 

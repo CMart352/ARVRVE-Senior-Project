@@ -98,7 +98,7 @@ public class UIButtonClick : MonoBehaviour
 
 	void SubmitCommands()
 	{
-		print("Play button pressed!");
+//		print("Play button pressed!");
 		/*If user had previously clicked the play Button, return player to original position and 
 		 * clear commandList so that when user clicks it again, commands are not duplicated
 		 */

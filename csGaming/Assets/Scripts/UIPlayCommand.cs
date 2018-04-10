@@ -203,12 +203,12 @@ public class UIPlayCommand : MonoBehaviour
             }*/
             if (command.Equals("MoveLeft()"))
             {
-                Debug.Log("moveLeft command issued.");
+//                Debug.Log("moveLeft command issued.");
                 //haxis += -1;
                 //vaxis += 0;
                 // rotation = -90f;
                 targetAngle = (targetAngle - 90) % 360;
-                print("TargetAngle = " + targetAngle);
+//                print("TargetAngle = " + targetAngle);
                 isRotating = true;
                 //Player.transform.Rotate(new Vector3(0, rotation, 0));
                 rotation = Player.transform.localRotation.eulerAngles.y;
@@ -232,7 +232,7 @@ public class UIPlayCommand : MonoBehaviour
                 // haxis += 0;
                 // vaxis += 1;
                 float rot = Player.transform.localRotation.eulerAngles.y;
-                print("Current rotation is: " + rotation);
+//                print("Current rotation is: " + rotation);
                 /*if (rot > 0f && rot <= 92f) //Move right
                 {
                     print("Move right");
@@ -286,7 +286,7 @@ public class UIPlayCommand : MonoBehaviour
                 //vaxis += -1;
                 //print("Current rotation is: " + rotation);
                 float rot = Player.transform.localRotation.eulerAngles.y ;
-                print("Current rotation is: " + rot);
+//                print("Current rotation is: " + rot);
                 /* if (rot > 0f && rot <= 92f) //Move left
                  {
                      print("Move left");
@@ -339,7 +339,7 @@ public class UIPlayCommand : MonoBehaviour
             }
             else
             {
-                print("method found " + command);
+//                print("method found " + command);
                 yield return StartCoroutine(ExecuteMethod(command));
             }
         }
@@ -369,10 +369,10 @@ public class UIPlayCommand : MonoBehaviour
         print("Before loop n = " + loopCount);
         while (i < loopCount)
         {
-            print("IN loop");
+//            print("IN loop");
             foreach (string command in btnInstance.jaggedWhileList[0])
             {
-                print("current command = " + command);
+//                print("current command = " + command);
                 /*if (command.Equals("moveLeft()"))
                 {
                     Debug.Log("moveLeft command issued.");
@@ -414,7 +414,7 @@ public class UIPlayCommand : MonoBehaviour
                     //haxis += -1;
                     //vaxis += 0;
                     targetAngle = (targetAngle - 90) % 360;
-                    print("TargetAngle = " + targetAngle);
+//                    print("TargetAngle = " + targetAngle);
                     isRotating = true;
                     yield return new WaitForSeconds(1f);
                 }
@@ -432,7 +432,7 @@ public class UIPlayCommand : MonoBehaviour
                     // haxis += 0;
                     // vaxis += 1;
                     float rot = Player.transform.localRotation.eulerAngles.y / 90;
-                    print("Current rotation is: " + rotation);
+//                    print("Current rotation is: " + rotation);
                     if (targetAngle == 0)//Move up
                     {
                         haxis += 0;
@@ -462,7 +462,7 @@ public class UIPlayCommand : MonoBehaviour
                     //vaxis += -1;
                     //print("Current rotation is: " + rotation);
                     float rot = Player.transform.localRotation.eulerAngles.y / 90;
-                    print("Current rotation is: " + rotation);
+//                    print("Current rotation is: " + rotation);
                     if (targetAngle == 0)//Move Down
                     {
                         haxis += 0;
