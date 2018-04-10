@@ -160,6 +160,7 @@
      <Compile Include="Assets\Scripts\TransitionScenes.cs" />
      <Compile Include="Assets\Scripts\UIButtonClick.cs" />
      <Compile Include="Assets\Scripts\UIPlayCommand.cs" />
+     <Compile Include="Assets\Scripts\UpdateProgress.cs" />
      <Compile Include="Assets\Scripts\Validation.cs" />
      <Compile Include="Assets\UI Assets\Scripts\ButtonClick.cs" />
      <Compile Include="Assets\UI Assets\Scripts\CameraSet.cs" />

@@ -15,6 +15,7 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	public Text attempts; 
 	int attempt; 
+	private int totalAttempt;
 
 	GameObject[] editBtn;
 
@@ -86,9 +87,15 @@ public class SubmitButtonHandler : MonoBehaviour {
 //        print("Should not be interactable: " + submit.interactable);
 		/* Increase no of attempts */
 		attempt++;
+		totalAttempt = attempt;
 
 		attempts.text = attempt.ToString (); 
 
+	}
+
+	public int getAttempts() {
+
+		return int.Parse(attempts.text);
 	}
 
 	void sendCommandsToCharacter()

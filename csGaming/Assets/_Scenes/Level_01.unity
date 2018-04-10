@@ -2460,7 +2460,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   solutionPanel: {fileID: 275526267}
   player: {fileID: 392978414}
-  rotatingBlocks: {fileID: 659838824}
   submit: {fileID: 971313776}
   clear: {fileID: 101709166}
   attempts: {fileID: 206274617}
@@ -13574,6 +13573,7 @@ GameObject:
   - component: {fileID: 1518086066}
   - component: {fileID: 1518086067}
   - component: {fileID: 1518086068}
+  - component: {fileID: 1518086069}
   m_Layer: 0
   m_Name: key
   m_TagString: Untagged
@@ -13656,6 +13656,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 2121850067}
+--- !u!114 &1518086069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1518086062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0244198197575491b952ae521711d973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solutionPanel: {fileID: 847289655}
+  player: {fileID: 392978414}
+  submit: {fileID: 971313776}
+  clear: {fileID: 101709166}
+  attempts: {fileID: 206274617}
 --- !u!43 &1540838536
 Mesh:
   m_ObjectHideFlags: 0

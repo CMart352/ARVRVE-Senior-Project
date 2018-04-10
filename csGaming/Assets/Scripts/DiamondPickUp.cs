@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class DiamondPickUp : MonoBehaviour
 {
@@ -9,12 +10,18 @@ public class DiamondPickUp : MonoBehaviour
     public GameObject diamond;
 	ContinueToLevel2 level2;
 	Timer clock;
+	SubmitButtonHandler handler;
+
+	private string currentLevel;
+	private int attempts;
+	private double timeToComplete;
 
 
 	// Use this for initialization
 	void Start () {
 
 		level2 = GetComponent<ContinueToLevel2> ();
+		handler = GetComponent<SubmitButtonHandler> ();
 
 		print ("Diamond start");
 
@@ -36,7 +43,14 @@ public class DiamondPickUp : MonoBehaviour
 				clock = GetComponent<Timer> ();
 			}
 				
-			print (clock.getTotalSeconds ());
+			currentLevel = SceneManager.GetActiveScene().name;
+			attempts = handler.getAttempts ();
+			timeToComplete = clock.getTotalSeconds();
+
+			string path = currentLevel + ".Attempts.KeysCollected.Time";
+
+			UpdateProgress.ProgressUpdate (path, attempts, timeToComplete);
+
             DoBeep();
             diamond.SetActive(false);
 			print ("Key has been picked up 1");

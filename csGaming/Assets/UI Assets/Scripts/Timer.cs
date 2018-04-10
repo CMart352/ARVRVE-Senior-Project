@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour {
 	private float hours = 0.0f;
 	private float startTime;
 	private bool isActive;
+	private double actualTime;
 
 	public Text clockText;
 
@@ -23,6 +24,7 @@ public class Timer : MonoBehaviour {
 		UpdateText ();
 
 		seconds += Time.deltaTime;
+		actualTime += Time.deltaTime;
 		if (seconds > 60) {
 			minutes += 1;
 			seconds = 0;
@@ -53,6 +55,6 @@ public class Timer : MonoBehaviour {
 	 * a level
 	*/
 	public double getTotalSeconds() {
-		return Math.Round(seconds);
+		return Math.Round(actualTime);
 	}
 }
