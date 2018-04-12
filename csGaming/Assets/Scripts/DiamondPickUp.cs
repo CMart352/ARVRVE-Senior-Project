@@ -16,6 +16,7 @@ public class DiamondPickUp : MonoBehaviour
 	private int attempts;
 	private double timeToComplete;
 
+	public static bool playClip; //flag to play success audio clip 
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +40,8 @@ public class DiamondPickUp : MonoBehaviour
 
         if(coll.gameObject == player)
         {
+			playClip = true;
+
 			if (clock == null && GetComponent<Timer> () != null) {
 				clock = GetComponent<Timer> ();
 			}
@@ -51,7 +54,7 @@ public class DiamondPickUp : MonoBehaviour
 
 			UpdateProgress.ProgressUpdate (path, attempts, timeToComplete);
 
-            DoBeep();
+           // DoBeep();
             diamond.SetActive(false);
 			print ("Key has been picked up 1");
 			level2.displayPopUp ();
@@ -63,8 +66,10 @@ public class DiamondPickUp : MonoBehaviour
 		//coll = GetComponent<Collider> ();
         if (coll.gameObject == player)
         {
+			playClip = true;
+
 			print ("On trigger stay");
-            DoBeep();
+            //DoBeep();
             diamond.SetActive(false);
 			print ("Key has been picked up 2");
 			level2.displayPopUp ();
@@ -75,8 +80,10 @@ public class DiamondPickUp : MonoBehaviour
     {
         if (other.gameObject == player)
         {
+			playClip = true;
+
 			print ("On trigger exit");
-            DoBeep();
+            //DoBeep();
             diamond.SetActive(false);
 			print ("Key has been picked up 3");
 			level2.displayPopUp ();

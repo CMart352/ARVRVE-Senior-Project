@@ -7,6 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class SignUp : MonoBehaviour {
 
+	public AudioSource AudioTrack;  //music clips objects
+	public AudioClip clip;
+
+	//flags neede on MusicmManager script
+	public static bool restartMusic ;
+	public static bool firstLevelbegins;
+
 	/*input fields*/
 
 	public GameObject Nickname;
@@ -138,6 +145,8 @@ public class SignUp : MonoBehaviour {
 		panel.SetActive (false);
 		start.SetActive (false);
 		goBack.SetActive (false);
+
+		AudioTrack = GetComponent<AudioSource>(); //line added
 	}
 
 
@@ -192,7 +201,7 @@ public class SignUp : MonoBehaviour {
 	/* Handling Start Button of the Registration Confirmation form */
 
 	public void RegisterUser (){  
-
+		firstLevelbegins = true;
 		SceneManager.LoadScene("Level_01");
 
 	}
@@ -201,6 +210,7 @@ public class SignUp : MonoBehaviour {
 
 	public void GoBackMainMenu (){  
 
+		restartMusic = true; 
 		SceneManager.LoadScene("WelcomeForm");
 
 	}
@@ -233,6 +243,9 @@ public class SignUp : MonoBehaviour {
 		
 
 			print ("invalid player");
+
+			AudioTrack.PlayOneShot (clip, 1.9F);  //lines added 
+			print ("Effect no.2 done well ");
 
 			//***just missing the validation for last name***
 

@@ -6,6 +6,8 @@ using GameSparks.Core;
 
 public class RegisterPlayer : MonoBehaviour {
 
+	public static bool stopMusic; 
+
 	public static void RegisterPlayerBttn(string displayName, string password,
 										  string email, string fname, string lname, int age,
 										  string gender, string school, string major, string schoolYear, Text textError, 
@@ -31,10 +33,9 @@ public class RegisterPlayer : MonoBehaviour {
 						SavePlayerData.SaveData (email, fname, lname, age, gender,
 												 school, major, schoolYear);
 					
-				    	
+				    	stopMusic = true;
 
-					    // after all is checked a ConfirmationRegistration form is displayed
-
+					    /* after all is checked a ConfirmationRegistration form is displayed*/
 					    RegistrationConfirmation.Confirmation(panel, start, goBack, succefullReg);
 					    textError.text = " ";
 

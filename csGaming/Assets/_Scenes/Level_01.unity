@@ -88,7 +88,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -139,7 +138,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 8709153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -74.52999, y: -15.450001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1566115656}
@@ -211,7 +210,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 19208429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -27.025002, y: -15.450006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1566115656}
@@ -330,7 +329,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1355776841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -960, y: -497.35516, z: 0}
   m_LocalScale: {x: 3.1578948, y: 3.1578948, z: 3.1578948}
   m_Children:
   - {fileID: 185016800}
@@ -375,7 +374,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43677447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 16.484812, y: -11.649986, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185016800}
@@ -523,7 +522,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -541,7 +539,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -732,7 +729,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 130079744}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -27.15, y: -15.450005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 295282466}
@@ -1026,13 +1023,13 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 175789276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 377, y: 220.5, z: 0}
+  m_LocalScale: {x: 0.39270833, y: 0.39270833, z: 0.39270833}
   m_Children:
   - {fileID: 42299748}
   - {fileID: 1969654398}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 32.264, y: 45, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1235,7 +1232,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185016799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 13, y: 337.7254, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 43677448}
@@ -1362,7 +1359,6 @@ Mesh:
     firstByte: 0
     indexCount: 60
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 40
     localAABB:
@@ -1380,7 +1376,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600180019001a0019001b001a001c001d001e001d001f001e00200021002200210023002200240025002600250027002600
   m_Skin: []
   m_VertexData:
@@ -1543,7 +1538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: -5.5270004}
 --- !u!1 &206274614
 GameObject:
@@ -1571,7 +1566,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206274614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -25.513, y: -15.45001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 295282466}
@@ -1635,7 +1630,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -1653,7 +1647,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -1765,7 +1758,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -1783,7 +1775,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -2025,7 +2016,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -2043,7 +2033,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -2155,7 +2144,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -2173,7 +2161,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -2304,7 +2291,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 295282465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.5000057}
+  m_LocalPosition: {x: 582.9, y: 336.3854, z: 5.5000057}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 130079745}
@@ -2475,7 +2462,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -2493,7 +2479,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -2605,7 +2590,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 30
     localAABB:
@@ -2623,7 +2607,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 0000010002000100030002000400050006000700080009000a000b000c000b000d000c000e000f001000110012001300140015001600150017001600180019001a001b001c001d00
   m_Skin: []
   m_VertexData:
@@ -2735,7 +2718,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -2753,7 +2735,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -3090,6 +3071,99 @@ Animator:
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: 5a9f4c54d22b04d29a36d9dc2ae76911, type: 3}
   m_PrefabInternal: {fileID: 852337230}
+--- !u!82 &392978419
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392978414}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 77a1c19738960401196e76c589389151, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &392978420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392978414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d97d74c43974c20a570e51323e0649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioTrack: {fileID: 392978419}
+  shot: {fileID: 8300000, guid: 77a1c19738960401196e76c589389151, type: 3}
 --- !u!114 &415258045 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114627190631105818, guid: af3fff3155f734c99b7891a966987e53,
@@ -3621,7 +3695,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -3639,7 +3712,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -3917,7 +3989,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -3935,7 +4006,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -4166,7 +4236,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -4184,7 +4253,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -5009,35 +5077,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4762451943142848, guid: c428ccb354ee8455397ee320f73dde23,
     type: 2}
   m_PrefabInternal: {fileID: 616473588}
---- !u!1 &624450445
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1144099547}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 624450446}
-  m_Layer: 0
-  m_Name: Missing Prefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &624450446
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1144099547}
-  m_GameObject: {fileID: 624450445}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1205461309}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &628602359
 Mesh:
   m_ObjectHideFlags: 0
@@ -5050,7 +5089,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -5068,7 +5106,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -5485,7 +5522,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 778954096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -74.710014, y: -15.449999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 295282466}
@@ -5596,7 +5633,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -5612,7 +5648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.92962676, z: 2.2577522}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 35.264, y: 45, z: 0}
 --- !u!45 &788783023
 Skybox:
@@ -6045,7 +6081,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -6063,7 +6098,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -6240,7 +6274,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -6258,7 +6291,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -6370,7 +6402,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -6388,7 +6419,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -7979,7 +8009,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -7997,7 +8026,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -8109,7 +8137,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -8127,7 +8154,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -10458,36 +10484,10 @@ Transform:
   m_PrefabParentObject: {fileID: 4762451943142848, guid: c428ccb354ee8455397ee320f73dde23,
     type: 2}
   m_PrefabInternal: {fileID: 1201477937}
---- !u!1 &1205461308
+--- !u!1 &1205461308 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100088, guid: 3e20eab569c7c2640b5d3359b8591355, type: 3}
   m_PrefabInternal: {fileID: 1144099547}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1205461309}
-  - component: {fileID: 1205461311}
-  - component: {fileID: 1205461312}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1205461309
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1144099547}
-  m_GameObject: {fileID: 1205461308}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 624450446}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1205461311
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10528,7 +10528,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -10546,7 +10545,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -10723,7 +10721,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -10741,7 +10738,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -11448,7 +11444,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -11466,7 +11461,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -13227,7 +13221,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -13245,7 +13238,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -13684,7 +13676,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -13702,7 +13693,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -13814,7 +13804,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -13832,7 +13821,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -13958,7 +13946,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1566115655}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 503.57715, y: 336.3854, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 19208430}
@@ -14244,7 +14232,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -14262,7 +14249,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -14377,12 +14363,12 @@ Prefab:
     - target: {fileID: 224433810389829440, guid: 3b50afe3940b042e5bcba4e804d577c7,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 377
       objectReference: {fileID: 0}
     - target: {fileID: 224433810389829440, guid: 3b50afe3940b042e5bcba4e804d577c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 220.5
       objectReference: {fileID: 0}
     - target: {fileID: 224433810389829440, guid: 3b50afe3940b042e5bcba4e804d577c7,
         type: 2}
@@ -15013,6 +14999,16 @@ Prefab:
       propertyPath: m_TagString
       value: Edits
       objectReference: {fileID: 0}
+    - target: {fileID: 224315346297442952, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 224315346297442952, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000076293945
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114169743048421488, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9, type: 2}
     - {fileID: 114478779992542476, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9, type: 2}
@@ -15031,7 +15027,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -15049,7 +15044,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -16624,7 +16618,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -16642,7 +16635,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -16787,7 +16779,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -16805,7 +16796,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -17071,7 +17061,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -17089,7 +17078,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -17259,7 +17247,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -17277,7 +17264,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -17389,7 +17375,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -17407,7 +17392,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -17517,12 +17501,12 @@ Prefab:
     - target: {fileID: 224113053263889438, guid: af3fff3155f734c99b7891a966987e53,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 377
       objectReference: {fileID: 0}
     - target: {fileID: 224113053263889438, guid: af3fff3155f734c99b7891a966987e53,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 220.5
       objectReference: {fileID: 0}
     - target: {fileID: 224113053263889438, guid: af3fff3155f734c99b7891a966987e53,
         type: 2}
@@ -17552,7 +17536,7 @@ Prefab:
     - target: {fileID: 224113053263889438, guid: af3fff3155f734c99b7891a966987e53,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224113053263889438, guid: af3fff3155f734c99b7891a966987e53,
         type: 2}
@@ -17637,7 +17621,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -17655,7 +17638,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -19020,7 +19002,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2121850065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -27.024977, y: -17.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1566115656}

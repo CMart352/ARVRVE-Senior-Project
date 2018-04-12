@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 
 public class Login : MonoBehaviour {
+	
 
 
 	public GameObject Username;
@@ -20,6 +21,11 @@ public class Login : MonoBehaviour {
 	public Text assk2;
 
 	public Text playerValidMessage; 
+
+
+
+
+
 
 	public void uploadScene() {
 		AuthenticatePlayer.AunthenticatePlayerBttn (username, password, playerValidMessage);
