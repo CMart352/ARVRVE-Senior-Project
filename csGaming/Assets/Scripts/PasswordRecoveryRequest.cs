@@ -26,9 +26,15 @@ public class PasswordRecoveryRequest : MonoBehaviour {
 
 	public Text emailWarning;
 
-	/**8this string may be needed by Fidel***/
 	public static string stringToken;
 	public static string stringPassword;
+
+	//go back to login panel
+	public GameObject notificationPanel;
+	public Text notification;
+	public GameObject goBackToLogin;
+
+	public Text errorMessage; 
 
 	void Start () {  
 
@@ -40,6 +46,11 @@ public class PasswordRecoveryRequest : MonoBehaviour {
 		confPass.SetActive (false);
 		confirmButton.SetActive (false);
 
+
+		notificationPanel.SetActive (false);
+		notification.text = " " ;
+		goBackToLogin.SetActive (false);
+
 		AudioTrack = GetComponent<AudioSource>();
 	}
 
@@ -49,7 +60,7 @@ public class PasswordRecoveryRequest : MonoBehaviour {
 
 
 
-		GSRequestData sd = new GSRequestData().
+		GSRequestData scriptData = new GSRequestData().
 			AddString("action", "passwordRecoveryRequest").
 			AddString("email", ForgetPasswordController.emailstring);
 	    	
@@ -59,7 +70,7 @@ public class PasswordRecoveryRequest : MonoBehaviour {
 		new GameSparks.Api.Requests.AuthenticationRequest().
 		SetUserName("").
 		SetPassword("").
-		SetScriptData (sd).
+		SetScriptData (scriptData).
 			Send ((response) => {
 		if (response.Errors.JSON.Contains("complete"))
 				{
@@ -98,6 +109,57 @@ public class PasswordRecoveryRequest : MonoBehaviour {
 
 
 	}
+
+	public void resetPassword() {
+		GSRequestData scriptData = new GSRequestData().
+			AddString("action", "resetPassword").
+			AddString("token", stringToken).
+			AddString("password", stringPassword);
+
+
+
+
+		new GameSparks.Api.Requests.AuthenticationRequest().
+		SetUserName("").
+		SetPassword("").
+		SetScriptData (scriptData).
+		Send ((response) => {
+			if (response.Errors.JSON.Contains("complete"))
+			{
+				Debug.Log("Password reset request sent");
+
+				//SHOW NEXT PANEL
+				notificationPanel.SetActive(true);
+				notification.text = "Password has been successfully reset";
+				notification.color = Color.white;
+				goBackToLogin.SetActive(true);
+
+
+
+
+
+			}
+			else
+			{
+				print("Invalid credentials");
+
+				AudioTrack.PlayOneShot (clip, 1.9F); 
+				print ("Effect no.2 done well ");
+
+				//error message shown
+				errorMessage.text = "WRONG INFORMATION ENTERED";
+				errorMessage.color = Color.red;
+
+				Debug.Log("Password Reset Error" + response.Errors.JSON.ToString());
+
+
+			}
+
+		});
+
+
+	}
+
 
 
 	void Update(){
