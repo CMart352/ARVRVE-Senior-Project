@@ -9,22 +9,33 @@ using UnityEngine.UI;
 public class AuthenticatePlayer : MonoBehaviour {
 
 	public static bool changeAudio; 
+	public Text playerTextError;
+
+	public AudioSource AudioTrack;  
+	public AudioClip clip;
 
 
 
+	void Start () {  
+		
+		AudioTrack = GetComponent<AudioSource>();
+	}
 
-	public static void AunthenticatePlayerBttn(string username, string password, Text playerTextError) {
+
+
+	public void AunthenticatePlayerBttn() {
+
 		new GameSparks.Api.Requests.AuthenticationRequest().
-			SetUserName(username).
-			SetPassword(password).
+		SetUserName(Login.username).
+			SetPassword(Login.password).
 			Send((response) => {
 				if (!response.HasErrors) {
 					Debug.Log("Player Authenticated...");
 			    	playerTextError.text = " ";
 					GetLevel.getLevel ();
 				   
-
-				    changeAudio = true;
+				    
+				   changeAudio = true;
 
 				} else {
 					/**Samira, add error messages similar to the ones you created**/
@@ -35,12 +46,25 @@ public class AuthenticatePlayer : MonoBehaviour {
 
 					Debug.Log("Error Authenticating Player...");
 
+			     	AudioTrack.PlayOneShot (clip, 1.9F); 
+			    	print ("Effect no.2 done well ");
+
 				    playerTextError.text = "Not valid user ";
 				    playerTextError.color = Color.red;
 
 				}
 			});
 
+
+	}
+
+	void Update () {
+
+		/*When user hits enters on Login Form*/
+		if( Input.GetKeyDown(KeyCode.Return) ) { 
+			
+			AunthenticatePlayerBttn ();
+		}
 
 	}
 }

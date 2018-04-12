@@ -14,8 +14,8 @@ public class Login : MonoBehaviour {
 	public GameObject Username;
 	public GameObject Password;
 
-	private string username;
-	private string password;
+	public static string username;
+	public static string password;
 
 	public Text assk1;
 	public Text assk2;
@@ -24,13 +24,6 @@ public class Login : MonoBehaviour {
 
 
 
-
-
-
-	public void uploadScene() {
-		AuthenticatePlayer.AunthenticatePlayerBttn (username, password, playerValidMessage);
-
-	}
 
 	void Update () {
 
@@ -47,10 +40,12 @@ public class Login : MonoBehaviour {
 
 		/*loads next scene by pressing <Return>*/
 
-		if( Input.GetKeyDown(KeyCode.Return) ) { 
+		//if( Input.GetKeyDown(KeyCode.Return) ) { 
 
-			uploadScene();
-		}
+			//uploadScene();
+
+		//	AuthenticatePlayer.AunthenticatePlayerBttn (username, password, playerValidMessage);
+	//	}
 
 
 
