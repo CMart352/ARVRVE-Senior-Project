@@ -7,9 +7,19 @@ using UnityEngine;
 public class QuitGame : MonoBehaviour
 {
     GameObject[] pauseObjects;
+
+    SpawnInstructions spawnInstructions;
+
     public Button resumePlay;
     public Button quit;
 	public Button pauseButton;
+
+    public Button up;
+    public Button down;
+    public Button left;
+    public Button right;
+    public Button clear;
+    public Button submit;
 
     // Use this for initialization
     void Start()
@@ -21,6 +31,7 @@ public class QuitGame : MonoBehaviour
         Button resumeBtn = resumePlay.GetComponent<Button>();
         Button quitBtn = quit.GetComponent<Button>();
 		Button pause = pauseButton.GetComponent<Button> ();
+        spawnInstructions = GetComponent<SpawnInstructions>() ;
 
         resumeBtn.onClick.AddListener(ResumeOnClick);
         quitBtn.onClick.AddListener(QuitOnClick);
@@ -36,14 +47,26 @@ public class QuitGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Time.timeScale == 1f)
+            if (Time.timeScale == 1f) //Paused
             {
                 Time.timeScale = 0f;
+                up.interactable = false;
+                down.interactable = false;
+                left.interactable = false;
+                right.interactable = false;
+                submit.interactable = false;
+                clear.interactable = false;
                 showPaused();
             }
-            else if (Time.timeScale == 0f)
+            else if (Time.timeScale == 0f) //Unpaused
             {
                 Time.timeScale = 1f;
+                up.interactable = true;
+                down.interactable = true;
+                left.interactable = true;
+                right.interactable = true;
+                submit.interactable = true;
+                clear.interactable = true;
                 hidePaused();
             }
         }
@@ -68,6 +91,12 @@ public class QuitGame : MonoBehaviour
     void ResumeOnClick()
     {
         Time.timeScale = 1f;
+        up.interactable = true;
+        down.interactable = true;
+        left.interactable = true;
+        right.interactable = true;
+        submit.interactable = true;
+        clear.interactable = true;
         hidePaused();
     }
 
@@ -84,12 +113,24 @@ public class QuitGame : MonoBehaviour
 		 if(Time.timeScale == 1f)
 			{
 				Time.timeScale = 0f;
-				showPaused();
+                up.interactable = false;
+                down.interactable = false;
+                left.interactable = false;
+                right.interactable = false;
+                submit.interactable = false;
+                clear.interactable = false;
+                showPaused();
 			}
 			else if(Time.timeScale == 0f)
 			{
 				Time.timeScale = 1;
-				hidePaused();
+                up.interactable = true;
+                down.interactable = true;
+                left.interactable = true;
+                right.interactable = true;
+                submit.interactable = true;
+                clear.interactable = true;
+                hidePaused();
 			}
 		}
 }

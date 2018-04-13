@@ -17,7 +17,7 @@ public class UIPlayCommand1 : MonoBehaviour {
 
     static Vector3 currentPosition; //vector3 to hold the current position of the node 
 
-    public float speed;
+    public float speed ;
 
     public Animator anim;
 

@@ -469,7 +469,6 @@ RectTransform:
   - {fileID: 1714673046}
   - {fileID: 159645721}
   - {fileID: 1566115656}
-  - {fileID: 295282466}
   - {fileID: 847289655}
   m_Father: {fileID: 175789280}
   m_RootOrder: 0
@@ -2202,6 +2201,12 @@ MonoBehaviour:
   resumePlay: {fileID: 1758320224}
   quit: {fileID: 426633094}
   pauseButton: {fileID: 185016802}
+  up: {fileID: 158219101}
+  down: {fileID: 755435368}
+  left: {fileID: 939239303}
+  right: {fileID: 847289653}
+  clear: {fileID: 101709166}
+  submit: {fileID: 971313776}
 --- !u!114 &185016802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3544,18 +3549,18 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 295282465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.5000057}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 6.142277}
+  m_LocalScale: {x: 1.1167763, y: 1.1167763, z: 1.1167763}
   m_Children:
   - {fileID: 130079745}
   - {fileID: 778954097}
   - {fileID: 206274615}
-  m_Father: {fileID: 42299748}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582.9, y: 314.9}
+  m_AnchoredPosition: {x: 650.96893, y: 366.88397}
   m_SizeDelta: {x: 74.71, y: 30.9}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &295282467
@@ -7525,6 +7530,10 @@ Prefab:
     - target: {fileID: 100138, guid: 5a9f4c54d22b04d29a36d9dc2ae76911, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 5a9f4c54d22b04d29a36d9dc2ae76911, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a9f4c54d22b04d29a36d9dc2ae76911, type: 3}
@@ -17167,6 +17176,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114134527959470916, guid: 3b50afe3940b042e5bcba4e804d577c7,
+        type: 2}
+      propertyPath: m_BlockingObjects
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b50afe3940b042e5bcba4e804d577c7, type: 2}
   m_IsPrefabParent: 0
@@ -17260,7 +17274,7 @@ Prefab:
     - target: {fileID: 224337944929836874, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224337944929836874, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
         type: 2}
