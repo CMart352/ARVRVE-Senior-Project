@@ -6,14 +6,17 @@ public class BlocksRotator : MonoBehaviour
 {
     private bool rotateClockWise = false;
 
+    public GameObject rotatingBlocks;
+
 	// Use this for initialization
 	void Start () {
-
+        rotatingBlocks = GetComponent<GameObject>();
 	}
 
 	public void Rotate() {
-		rotateClockWise = true;
+        rotateClockWise = true;
 	}
+
 
 	// Update is called once per frame
 	public void Update () {

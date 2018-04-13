@@ -22,8 +22,9 @@ public class SubmitButtonHandler : MonoBehaviour {
 	bool submitClicked;
 
 
-	UIPlayCommand commandExecution;
+	UIPlayCommand1 commandExecution;
 	UIButtonClick commandProcessor;
+    BlocksRotator bl;
 
 	// Use this for initialization
 	void Start () {
@@ -32,12 +33,13 @@ public class SubmitButtonHandler : MonoBehaviour {
 		submitBtn.onClick.AddListener (AddCommandsToCommandList);
 
 		//Record original position of the player 
-		originalPos = player.transform.position;
-		originalRot = player.transform.rotation;
+        originalPos = player.transform.localPosition;
+        originalRot = player.transform.localRotation;
 
 		//Create instance of the two player handler classes
 		commandProcessor = GetComponent<UIButtonClick>();
-		commandExecution = GetComponent<UIPlayCommand> (); 
+		commandExecution = GetComponent<UIPlayCommand1> ();
+        bl = GetComponent<BlocksRotator>();
 
         attempt = 0; 
 		submitClicked = false;
@@ -51,9 +53,12 @@ public class SubmitButtonHandler : MonoBehaviour {
 			return;
 		
 		/* Return player to original position */
-		player.transform.position = originalPos;
-		player.transform.rotation = originalRot;
-        commandExecution.rotation = 0f;
+        player.transform.localPosition = originalPos;
+        player.transform.localRotation = originalRot;
+        commandExecution.playerRot = 0; //to reset the rotation of the player
+        commandExecution.indexNode = 0; //to set reset the index node 
+        commandExecution.targetAngle = 0; //to reset the angle rotation
+
 
 		submitClicked = true;
 
