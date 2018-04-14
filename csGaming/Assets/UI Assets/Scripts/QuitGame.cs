@@ -6,8 +6,11 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour
 {
+	public static bool isPauseMenuInactive;
+
     GameObject[] pauseObjects;
 
+	//flag to notification of sound effects
     SpawnInstructions spawnInstructions;
 
     public Button resumePlay;
@@ -57,6 +60,8 @@ public class QuitGame : MonoBehaviour
                 submit.interactable = false;
                 clear.interactable = false;
                 showPaused();
+
+				isPauseMenuInactive = true;
             }
             else if (Time.timeScale == 0f) //Unpaused
             {
@@ -68,6 +73,8 @@ public class QuitGame : MonoBehaviour
                 submit.interactable = true;
                 clear.interactable = true;
                 hidePaused();
+
+				isPauseMenuInactive = false;
             }
         }
     }
@@ -98,6 +105,8 @@ public class QuitGame : MonoBehaviour
         submit.interactable = true;
         clear.interactable = true;
         hidePaused();
+
+		isPauseMenuInactive = false;
     }
 
     void QuitOnClick()
@@ -120,6 +129,8 @@ public class QuitGame : MonoBehaviour
                 submit.interactable = false;
                 clear.interactable = false;
                 showPaused();
+
+			    isPauseMenuInactive = true;
 			}
 			else if(Time.timeScale == 0f)
 			{
@@ -131,6 +142,8 @@ public class QuitGame : MonoBehaviour
                 submit.interactable = true;
                 clear.interactable = true;
                 hidePaused();
+
+			   isPauseMenuInactive = false;
 			}
 		}
 }

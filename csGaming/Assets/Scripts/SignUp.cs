@@ -9,7 +9,7 @@ public class SignUp : MonoBehaviour {
 
 	public AudioSource AudioTrack;  //music clips objects
 	public AudioClip clip;
-
+	public AudioClip success;
 	//flags neede on MusicmManager script
 	public static bool restartMusic ;
 	public static bool firstLevelbegins;
@@ -236,6 +236,9 @@ public class SignUp : MonoBehaviour {
 			RegisterPlayer.RegisterPlayerBttn (nickname, password, email, firstname,
 				lastname, Int32.Parse(age), selectedGender,
 				selectedSchool, selectedMajor, selectedSchoolyear, usernameError , panel, start ,goBack, succefullReg);
+
+			AudioTrack.PlayOneShot (success, 1.9F);  //lines added 
+			print ("Effect no.2 done well ");
 			
 
 		}else { //show erros

@@ -14,7 +14,7 @@ public class AuthenticatePlayer : MonoBehaviour {
 	public AudioSource AudioTrack;  
 	public AudioClip clip;
 
-
+	public AudioClip success; 
 
 	void Start () {  
 		
@@ -34,7 +34,9 @@ public class AuthenticatePlayer : MonoBehaviour {
 			    	playerTextError.text = " ";
 					GetLevel.getLevel ();
 				   
-				    
+			    	AudioTrack.PlayOneShot (success, 1.9F); 
+				    print ("Effect no.2 done well ");    
+
 				   changeAudio = true;
 
 				} else {

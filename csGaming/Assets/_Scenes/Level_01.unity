@@ -88,7 +88,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -139,7 +138,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 8709153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -74.52999, y: -15.450001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1566115656}
@@ -211,7 +210,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 19208429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -27.025002, y: -15.450006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1566115656}
@@ -334,7 +333,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -352,7 +350,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -460,7 +457,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1355776841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -960, y: -497.3551, z: 0}
   m_LocalScale: {x: 3.1578948, y: 3.1578948, z: 3.1578948}
   m_Children:
   - {fileID: 185016800}
@@ -505,7 +502,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43677447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 16.484812, y: -11.649986, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185016800}
@@ -693,7 +690,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -711,7 +707,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -1672,7 +1667,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 130079744}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -27.15, y: -15.450005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 295282466}
@@ -1966,8 +1961,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 175789276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 394.5, y: 222, z: 0}
+  m_LocalScale: {x: 0.4109375, y: 0.4109375, z: 0.4109375}
   m_Children:
   - {fileID: 42299748}
   - {fileID: 1969654398}
@@ -2160,6 +2155,7 @@ GameObject:
   - component: {fileID: 185016803}
   - component: {fileID: 185016802}
   - component: {fileID: 185016801}
+  - component: {fileID: 185016805}
   m_Layer: 0
   m_Name: Button_Pause
   m_TagString: Untagged
@@ -2175,7 +2171,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185016799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 13, y: 316.46814, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 43677448}
@@ -2296,6 +2292,36 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185016799}
+--- !u!114 &185016805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185016799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: hoverEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!43 &192824470
 Mesh:
   m_ObjectHideFlags: 0
@@ -2308,7 +2334,6 @@ Mesh:
     firstByte: 0
     indexCount: 60
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 40
     localAABB:
@@ -2326,7 +2351,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600180019001a0019001b001a001c001d001e001d001f001e00200021002200210023002200240025002600250027002600
   m_Skin: []
   m_VertexData:
@@ -2517,7 +2541,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206274614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -25.513, y: -15.45001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 295282466}
@@ -2581,7 +2605,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -2599,7 +2622,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -2711,7 +2733,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -2729,7 +2750,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -2971,7 +2991,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -2989,7 +3008,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -3101,7 +3119,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -3119,7 +3136,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -3231,7 +3247,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -3249,7 +3264,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -3366,7 +3380,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -3384,7 +3397,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -3550,7 +3562,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 295282465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.5736883}
+  m_LocalPosition: {x: 573.6, y: 315.78815, z: 3.5736883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 130079745}
@@ -3780,7 +3792,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -3798,7 +3809,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -3950,7 +3960,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 30
     localAABB:
@@ -3968,7 +3977,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 0000010002000100030002000400050006000700080009000a000b000c000b000d000c000e000f001000110012001300140015001600150017001600180019001a001b001c001d00
   m_Skin: []
   m_VertexData:
@@ -4080,7 +4088,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -4098,7 +4105,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -4198,6 +4204,64 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &367182176 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1568228067112866, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1629451352}
+--- !u!114 &367182180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367182176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: hoverEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: clickSubmitEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &368739531
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,6 +4458,58 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370701462}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &389453848 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755259528226178, guid: 3b50afe3940b042e5bcba4e804d577c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1584229326}
+--- !u!114 &389453852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389453848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: hoverOnPause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: clickOnPause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &392978414 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100138, guid: 5a9f4c54d22b04d29a36d9dc2ae76911, type: 3}
@@ -5139,7 +5255,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -5157,7 +5272,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -5257,6 +5371,186 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &489007120 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1204318543652004, guid: d7f9246acaa7d4593ad6c1b1b3eef702,
+    type: 2}
+  m_PrefabInternal: {fileID: 579885849}
+--- !u!114 &489007123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489007120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: hoverEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: clickEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!1 &501976992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 501976995}
+  - component: {fileID: 501976994}
+  - component: {fileID: 501976993}
+  m_Layer: 0
+  m_Name: SoundEffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &501976993
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501976992}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 017314de1393e4605be00e1204c66f3c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.116
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &501976994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501976992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebfb40ed0ac4424caee52d3f91ed650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioTrack: {fileID: 501976993}
+  hoverClip: {fileID: 8300000, guid: 218647529edf0456eb86412691f94dda, type: 3}
+  clickClip: {fileID: 8300000, guid: 2754b3dd18f06428f8f9d9ce2ca541fb, type: 3}
+  submitButtonClip: {fileID: 8300000, guid: fb18dba1332b74295b9a2f6bbe7784c7, type: 3}
+  clearButtonClip: {fileID: 8300000, guid: 935f3b1085cdc40e099aedcdfb939777, type: 3}
+  clickonPause: {fileID: 8300000, guid: 7b346a740881b4a6f808d4eb1a85a970, type: 3}
+  clickonquit: {fileID: 8300000, guid: a75d533adfe6040e788fc51e0f5d6301, type: 3}
+--- !u!4 &501976995
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501976992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 338.12604, y: 194.30844, z: 10.411563}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &506938356 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4762451943142848, guid: c428ccb354ee8455397ee320f73dde23,
@@ -5515,7 +5809,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -5533,7 +5826,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -5764,7 +6056,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -5782,7 +6073,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -5894,7 +6184,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -5912,7 +6201,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -7140,7 +7428,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 778954096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -74.710014, y: -15.449999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 295282466}
@@ -7251,7 +7539,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -7854,7 +8141,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -7872,7 +8158,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -7972,6 +8257,110 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &1008845637 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1511479712144780, guid: c9de4b73aa0c04ab59b3ab77242cb90f,
+    type: 2}
+  m_PrefabInternal: {fileID: 823633909}
+--- !u!114 &1008845640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1008845637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: hoverEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: clickEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!1 &1012031979 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1914384400198624, guid: 3b50afe3940b042e5bcba4e804d577c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1584229326}
+--- !u!114 &1012031983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012031979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: hoverOnPause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: clickOnQuit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &1017879273
 Prefab:
   m_ObjectHideFlags: 0
@@ -8049,7 +8438,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -8067,7 +8455,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -8179,7 +8566,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -8197,7 +8583,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -9913,7 +10298,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -9931,7 +10315,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -10043,7 +10426,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -10061,7 +10443,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -10358,6 +10739,58 @@ Transform:
   m_Father: {fileID: 2136826342}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1191161769 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1010424802249162, guid: 21ff7a92e7ce14e38b71b0e5fc2ad5bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1774035390}
+--- !u!114 &1191161773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1191161769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: hoverEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: clickEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1194043403
 GameObject:
   m_ObjectHideFlags: 0
@@ -12622,7 +13055,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -12640,7 +13072,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -13347,7 +13778,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -13365,7 +13795,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -13612,7 +14041,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -13630,7 +14058,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -13758,7 +14185,6 @@ Mesh:
     firstByte: 0
     indexCount: 30
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 20
     localAABB:
@@ -13776,7 +14202,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200
   m_Skin: []
   m_VertexData:
@@ -15566,7 +15991,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -15584,7 +16008,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -15696,7 +16119,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -15714,7 +16136,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -16193,7 +16614,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -16211,7 +16631,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -16323,7 +16742,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -16341,7 +16759,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -16467,7 +16884,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1566115655}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 503.57715, y: 315.12814, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 19208430}
@@ -16840,12 +17257,12 @@ Prefab:
     - target: {fileID: 224433810389829440, guid: 3b50afe3940b042e5bcba4e804d577c7,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 394.5
       objectReference: {fileID: 0}
     - target: {fileID: 224433810389829440, guid: 3b50afe3940b042e5bcba4e804d577c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 222
       objectReference: {fileID: 0}
     - target: {fileID: 224433810389829440, guid: 3b50afe3940b042e5bcba4e804d577c7,
         type: 2}
@@ -17182,6 +17599,16 @@ Prefab:
       propertyPath: m_BlockingObjects
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114590406539599672, guid: 3b50afe3940b042e5bcba4e804d577c7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114590406539599672, guid: 3b50afe3940b042e5bcba4e804d577c7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b50afe3940b042e5bcba4e804d577c7, type: 2}
   m_IsPrefabParent: 0
@@ -17461,12 +17888,12 @@ Prefab:
     - target: {fileID: 224315346297442952, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000007629382
+      value: 0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 224315346297442952, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076294
+      value: -0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 114396401582590650, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
         type: 2}
@@ -17524,12 +17951,12 @@ Prefab:
     - target: {fileID: 224315346297442952, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 224315346297442952, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 114396401582590650, guid: b5c3efe0735d94395b5ecb2a7b5c1ad9,
         type: 2}
@@ -19237,7 +19664,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -19255,7 +19681,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -19440,7 +19865,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -19458,7 +19882,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -19564,6 +19987,58 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1584229326}
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1761573318 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1149296842706884, guid: 05ef9258734144ca98fed6c68fbc7194,
+    type: 2}
+  m_PrefabInternal: {fileID: 1937577364}
+--- !u!114 &1761573323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761573318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: hoverEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: clickClearEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &1774035390
 Prefab:
   m_ObjectHideFlags: 0
@@ -19782,7 +20257,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -19800,7 +20274,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -19952,7 +20425,6 @@ Mesh:
     firstByte: 0
     indexCount: 36
     topology: 0
-    baseVertex: 0
     firstVertex: 0
     vertexCount: 24
     localAABB:
@@ -19970,7 +20442,6 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexFormat: 0
   m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
   m_Skin: []
   m_VertexData:
@@ -20080,12 +20551,12 @@ Prefab:
     - target: {fileID: 224113053263889438, guid: af3fff3155f734c99b7891a966987e53,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 394.5
       objectReference: {fileID: 0}
     - target: {fileID: 224113053263889438, guid: af3fff3155f734c99b7891a966987e53,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 222
       objectReference: {fileID: 0}
     - target: {fileID: 224113053263889438, guid: af3fff3155f734c99b7891a966987e53,
         type: 2}
@@ -21533,7 +22004,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2121850065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -27.024977, y: -17.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1566115656}
@@ -21595,6 +22066,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 2121850067}
+--- !u!1 &2126493490 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1525957555564054, guid: aaf3ec69134e140a8bd6b0abc8f564b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1498040251}
+--- !u!114 &2126493493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126493490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: hoverEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 501976994}
+          m_MethodName: clickEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &2133363147
 GameObject:
   m_ObjectHideFlags: 0
