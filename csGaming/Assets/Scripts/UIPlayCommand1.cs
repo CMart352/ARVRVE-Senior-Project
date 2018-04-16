@@ -234,7 +234,7 @@ public class UIPlayCommand1 : MonoBehaviour {
 
             /*if the distance between the position of the player and the node is bigger than 0 then move the player to that node
              when the node is reaced the distance between the position of the node and the position of the player should be 0 */
-            while (Player.transform.localPosition != currentPosition) //Vector3.Distance(Player.transform.localPosition, currentPosition) > 0.19f)
+            while (Vector3.Distance(Player.transform.localPosition, currentPosition) > 0.19f)
             {
 
                 //to increase the speed between the gap 
