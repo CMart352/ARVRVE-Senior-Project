@@ -6,8 +6,8 @@ public class PressingTrigger : MonoBehaviour {
 
 	public BlocksRotator bl;
     public GameObject player;
-    public GameObject wall;
-    public GameObject cube;
+    //public GameObject wall;
+    //public GameObject cube;
 
 	void Start() {
 		bl = GameObject.FindObjectOfType<BlocksRotator>();
@@ -47,13 +47,13 @@ public class PressingTrigger : MonoBehaviour {
         }
     }
 
-    private void Update()
-    {
-       // print(cube.transform.position);
-        if(cube.transform.position == new Vector3(-4.5F, 9.5f, -1.5f))
-        {
-            //print("Rotated successfully");
-            wall.GetComponent<Collider>().enabled = false;
-        }
-    }
+    //private void Update()
+    //{
+    //   // print(cube.transform.position);
+    //    if(cube.transform.position == new Vector3(-4.5F, 9.5f, -1.5f))
+    //    {
+    //        //print("Rotated successfully");
+    //        wall.GetComponent<Collider>().enabled = false;
+    //    }
+    //}
 }

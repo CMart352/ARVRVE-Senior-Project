@@ -67,7 +67,7 @@ public class SpawnInstructions : MonoBehaviour {
 			GameObject command = Instantiate (commandPrefab) as GameObject;
 			command.SetActive (true);
 			command.name = "MoveRight()";
-			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveRight()");
+			command.GetComponent<CommandListCommand> ().SetText ("Player.TurnRight()");
 			command.transform.SetParent (commandPrefab.transform.parent, false);
 
 	}
@@ -92,7 +92,7 @@ public class SpawnInstructions : MonoBehaviour {
 			GameObject command = Instantiate (commandPrefab) as GameObject;
 			command.SetActive (true);
 			command.name = "MoveLeft()";
-			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveLeft()");
+			command.GetComponent<CommandListCommand> ().SetText ("Player.TurnLeft()");
 			command.transform.SetParent (commandPrefab.transform.parent, false);
 
 
@@ -117,7 +117,7 @@ public class SpawnInstructions : MonoBehaviour {
 			GameObject command = Instantiate (commandPrefab) as GameObject;
 			command.SetActive (true);
 			command.name = "MoveUp()";
-			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveUp()");
+			command.GetComponent<CommandListCommand> ().SetText ("Player.MoveForward()");
 			command.transform.SetParent (commandPrefab.transform.parent, false);
 
 	}

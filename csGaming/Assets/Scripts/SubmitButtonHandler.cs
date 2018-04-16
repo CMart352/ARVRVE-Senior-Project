@@ -55,7 +55,6 @@ public class SubmitButtonHandler : MonoBehaviour {
 		/* Return player to original position */
         player.transform.localPosition = originalPos;
         player.transform.localRotation = originalRot;
-        commandExecution.playerRot = 0; //to reset the rotation of the player
         commandExecution.indexNode = 0; //to set reset the index node 
         commandExecution.targetAngle = 0; //to reset the angle rotation
 
