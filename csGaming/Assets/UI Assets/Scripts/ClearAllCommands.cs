@@ -16,8 +16,8 @@ public class ClearAllCommands : MonoBehaviour {
 
 		Button clearBtn = clearButton.GetComponent<Button>();
 		clearButton.onClick.AddListener(Clear);
-		originalPos = player.transform.position;
-		originalRot = player.transform.rotation;
+        originalPos = player.transform.localPosition;
+        originalRot = player.transform.localRotation;
         commandExecution = GetComponent<UIPlayCommand>();
     }
 	
@@ -38,8 +38,8 @@ public class ClearAllCommands : MonoBehaviour {
 		}
 
 		//Move player to its original position
-		player.transform.position = originalPos;
-		player.transform.rotation = originalRot;
+        player.transform.localPosition = originalPos;
+        player.transform.localRotation = originalRot;
 
 	}
 }

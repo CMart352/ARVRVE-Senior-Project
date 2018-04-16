@@ -76,7 +76,7 @@ public class UIPlayCommand1 : MonoBehaviour {
 
 	}
 
-
+    int walk;
 
 
 
@@ -84,7 +84,7 @@ public class UIPlayCommand1 : MonoBehaviour {
         int cmdUp = 0;//cmdDown = 0, right = 0, left = 0, j = 0, rotations = 0;
 
         //playerRot = (int)Player.transform.localEulerAngles.y;
-        print("Entered ExecuteCommand method");
+        //print("Entered ExecuteCommand method");
 
         //yield return new WaitForSecondsRealtime(0.5f);
 
@@ -97,16 +97,21 @@ public class UIPlayCommand1 : MonoBehaviour {
                 //right++; //count the amount of moveUp commands issued
                 angleCount++;
                 //print("right commands " + right);
-                print("Angle Count = " + angleCount);
-                print("Turn right entered!");
+                //print("Angle Count = " + angleCount);
+                //print("Turn right entered!");
                 //to get the angle to rotate the character
-                //targetAngle = anglesR[(right-1) % anglesR.Length];
                 targetAngle = angles[angleCount % angles.Length];
                 //print("targetAngle angle RIGHT = " + targetAngle);
 
                 playerRot = Player.transform.localRotation.eulerAngles.y; //gets the local rotation of the character
 
                 rotated = true;
+
+                walk = indexNode;
+
+                print("walk ind =" + walk);
+
+                print("player rotated to the right");
 
                 yield return new WaitForSeconds(1f);
 
@@ -122,17 +127,16 @@ public class UIPlayCommand1 : MonoBehaviour {
                     angleCount = 3;
                 }
                 //print("LEFT commands " + left);
-                print("Angle Count = " + angleCount);
-                print("Turn left entered!");
-                //targetAngle = anglesL[(left - 1) % anglesL.Length];
+                //print("Angle Count = " + angleCount);
+                //print("Turn left entered!");
                 targetAngle = angles[angleCount % angles.Length];
-                print("targetAngle angle LEFT = " + targetAngle);
+                //print("targetAngle angle LEFT = " + targetAngle);
 
                 playerRot = Player.transform.localRotation.eulerAngles.y; //gets the local rotation of the character
 
                 rotated = true;
 
-                //print("player rotated to the left");
+                print("player rotated to the left");
 
                 yield return new WaitForSeconds(1f);
 
@@ -146,39 +150,45 @@ public class UIPlayCommand1 : MonoBehaviour {
 
                // anim.SetBool("isWalking", true); //start walking animation 
 
+                //print("playerpos = "+ Player.transform.localPosition + "nodespos = " + nodes[indexNode].transform.localPosition);
 
-                //to prevent the player from moving when it is not facing the correct way
-                if (indexNode < 8 && (targetAngle == 0 || targetAngle == 360))
+
+                if (indexNode > 4)
                 {
-                    yield return StartCoroutine(Walk()); //where the player moves
-                } 
-
-                if (indexNode > 4){
-                    print(Player.GetComponent<CapsuleCollider>());
+                    //print(Player.GetComponent<CapsuleCollider>());
                     playerCollider.enabled = true;
-                    print("Collider enabled: " + playerCollider.enabled);
+                    //print("Collider enabled: " + playerCollider.enabled);
                 }
 
-                if(indexNode > 8 && targetAngle == 90 && indexNode < 17){
-                    if (indexNode == 11){
-                        isWalking = false;
-                        yield return new WaitForSeconds(2f);
-                    }
-                    yield return StartCoroutine(Walk());
+                //to prevent the player from moving when it is not facing the correct way
+
+                if (indexNode < 8 && targetAngle == 0) //|| targetAngle == 360))
+                {
+                    yield return StartCoroutine(Walk()); //where the player moves
+                }
+
+                if(indexNode > 8 && targetAngle == 90 && indexNode < 17 && cmdUp > 9){
+                        if (indexNode == 11)
+                        {
+                            isWalking = false;
+                            yield return new WaitForSeconds(2f);
+                        }
+                        yield return StartCoroutine(Walk());
                 }
 
                 if(indexNode > 17 && (targetAngle == 0 || targetAngle == 360)){
                     yield return StartCoroutine(Walk());
                 }
 
-                //make logic for walking after the node 7, I have to put the nodes on the scene
 
+                //make logic for walking after the node 7, I have to put the nodes on the scene
 
                 //inverse logic for move down
                 if (indexNode < cmdUp)
                 {
                     indexNode++;
                 }
+
 
                 //to stop the animation once the player has reached the end node
                 //if (indexNode == cmdUp)
@@ -224,7 +234,7 @@ public class UIPlayCommand1 : MonoBehaviour {
 
             /*if the distance between the position of the player and the node is bigger than 0 then move the player to that node
              when the node is reaced the distance between the position of the node and the position of the player should be 0 */
-            while (Vector3.Distance(Player.transform.localPosition, currentPosition) > 0.19f)
+            while (Player.transform.localPosition != currentPosition) //Vector3.Distance(Player.transform.localPosition, currentPosition) > 0.19f)
             {
 
                 //to increase the speed between the gap 
