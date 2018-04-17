@@ -19,5 +19,27 @@ public class AudioDecrease : MonoBehaviour {
 	}
 
 
+
+
+	public static IEnumerator Increase(AudioSource audioTrack, float FadeTime)
+	{
+		float startVolume = 0.2f;
+
+		audioTrack.volume = 0;
+		audioTrack.Play();
+
+		while (audioTrack.volume < 1.0f)
+		{
+			audioTrack.volume += startVolume * Time.deltaTime / FadeTime;
+
+			yield return null;
+		}
+
+		//audioTrack.volume = 1f;
+		audioTrack.volume = 0.515f;
+	}
+
+
+
 }
 

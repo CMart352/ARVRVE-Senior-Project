@@ -117,7 +117,7 @@ public class UIPlayCommand1 : MonoBehaviour {
 
 
 				//playerWaling Flag
-				isPlayerWalking = true;
+				//isPlayerWalking = true;
                 yield return new WaitForSeconds(1f);
 
             }
@@ -144,7 +144,7 @@ public class UIPlayCommand1 : MonoBehaviour {
                 print("player rotated to the left");
 
 				//playerWaling Flag
-				isPlayerWalking = true;
+				//isPlayerWalking = true;
                 yield return new WaitForSeconds(1f);
 
             }
@@ -164,6 +164,8 @@ public class UIPlayCommand1 : MonoBehaviour {
                 {
                     //print(Player.GetComponent<CapsuleCollider>());
                     playerCollider.enabled = true;
+					//playerWaling Flag
+				//	isPlayerWalking = true;
                     //print("Collider enabled: " + playerCollider.enabled);
                 }
 
@@ -181,14 +183,14 @@ public class UIPlayCommand1 : MonoBehaviour {
                             yield return new WaitForSeconds(2f);
                         }
 					    //playerWaling Flag
-					     isPlayerWalking = true;
+					    // isPlayerWalking = true;
                         yield return StartCoroutine(Walk());
                 }
 
                 if(indexNode > 17 && (targetAngle == 0 || targetAngle == 360)){
 
 					//playerWaling Flag
-					isPlayerWalking = true;
+					//isPlayerWalking = true;
                     yield return StartCoroutine(Walk());
                 }
 
@@ -262,7 +264,7 @@ public class UIPlayCommand1 : MonoBehaviour {
                 //perform the movement of the player from one node to the other
                 Player.transform.localPosition = Vector3.MoveTowards(Player.transform.localPosition, currentPosition, speed * Time.deltaTime);
                 anim.SetBool("isWalking", true); //starts the walking animation 
-
+				//isPlayerWalking = true;
                 yield return null; //waits for the function to end
             }
 

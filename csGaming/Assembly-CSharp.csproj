@@ -127,6 +127,7 @@
      <Compile Include="Assets\Models\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
      <Compile Include="Assets\Models\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
      <Compile Include="Assets\Models\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
+     <Compile Include="Assets\MusicManagerLevel01.cs" />
      <Compile Include="Assets\ResetBlocks.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\Bloom.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\ImageEffectBase.cs" />
@@ -199,6 +200,7 @@
      <Compile Include="Assets\UI Assets\Scripts\WhileCommand.cs" />
      <Compile Include="Assets\UI Assets\Scripts\WhileLoopConfirm.cs" />
      <Compile Include="Assets\UI Assets\Simple UI\Samples\IconPreview.cs" />
+     <Compile Include="Assets\VolumeController.cs" />
      <Compile Include="Assets\WalkingPlayerSound.cs" />
      <Compile Include="Assets\WaypointsTool\Scripts\WaypoinntsToolMenu.cs" />
      <Compile Include="Assets\WaypointsTool\Scripts\WaypointsToolAboutMenu.cs" />

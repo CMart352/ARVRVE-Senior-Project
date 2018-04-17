@@ -7,6 +7,8 @@ using UnityEngine;
 public class QuitGame : MonoBehaviour
 {
 	public static bool isPauseMenuInactive;
+	public static bool decreaseSound;
+	public static bool slowMusic;
 
     GameObject[] pauseObjects;
 
@@ -81,6 +83,7 @@ public class QuitGame : MonoBehaviour
 
     public void hidePaused()
     {
+		slowMusic = false;
         foreach(GameObject g in pauseObjects)
         {
             g.SetActive(false);
@@ -89,6 +92,8 @@ public class QuitGame : MonoBehaviour
 
     public void showPaused()
     {
+		slowMusic = true;
+
         foreach(GameObject g in pauseObjects)
         {
             g.SetActive(true);
@@ -111,6 +116,7 @@ public class QuitGame : MonoBehaviour
 
     void QuitOnClick()
     {
+		decreaseSound = true;
         Application.Quit();
     }
 
