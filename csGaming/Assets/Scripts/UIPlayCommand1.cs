@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UIPlayCommand1 : MonoBehaviour {
 
+	public static bool isPlayerWalking; 
+
     UIButtonClick btnInstance; //script with the list of commands 
 
     GameObject Player; //to get the player 
@@ -113,6 +115,9 @@ public class UIPlayCommand1 : MonoBehaviour {
 
                 print("player rotated to the right");
 
+
+				//playerWaling Flag
+				isPlayerWalking = true;
                 yield return new WaitForSeconds(1f);
 
             }
@@ -138,6 +143,8 @@ public class UIPlayCommand1 : MonoBehaviour {
 
                 print("player rotated to the left");
 
+				//playerWaling Flag
+				isPlayerWalking = true;
                 yield return new WaitForSeconds(1f);
 
             }
@@ -173,10 +180,15 @@ public class UIPlayCommand1 : MonoBehaviour {
                             isWalking = false;
                             yield return new WaitForSeconds(2f);
                         }
+					    //playerWaling Flag
+					     isPlayerWalking = true;
                         yield return StartCoroutine(Walk());
                 }
 
                 if(indexNode > 17 && (targetAngle == 0 || targetAngle == 360)){
+
+					//playerWaling Flag
+					isPlayerWalking = true;
                     yield return StartCoroutine(Walk());
                 }
 
