@@ -113,6 +113,7 @@ public class SignUp : MonoBehaviour {
 
 	//Error messages objects
 	public Text usernameError;
+    public Text emailErrorMessage;
 	public Text firstnameError;
 	public Text lastnameError;       //lastnameError object
 	public Text passError; 
@@ -234,8 +235,9 @@ public class SignUp : MonoBehaviour {
 		    && isSchoolYearValid && isMajorValid && isSchoolValid /* && isLastnameValid */) {
 
 			RegisterPlayer.RegisterPlayerBttn (nickname, password, email, firstname,
-				lastname, Int32.Parse(age), selectedGender,
-				selectedSchool, selectedMajor, selectedSchoolyear, usernameError , panel, start ,goBack, succefullReg);
+				                               lastname, Int32.Parse(age), selectedGender,selectedSchool,
+                                               selectedMajor, selectedSchoolyear, usernameError,
+                                               emailErrorMessage, panel, start ,goBack, succefullReg);
 
 			AudioTrack.PlayOneShot (success, 1.9F);  //lines added 
 			print ("Effect no.2 done well ");

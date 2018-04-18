@@ -11,7 +11,8 @@ public class RegisterPlayer : MonoBehaviour {
 	public static void RegisterPlayerBttn(string displayName, string password,
 										  string email, string fname, string lname, int age,
 										  string gender, string school, string major, string schoolYear, Text textError, 
-										  GameObject panel, GameObject start, GameObject goBack, Text succefullReg )
+                                          Text emailError, GameObject panel, GameObject start,
+                                          GameObject goBack, Text succefullReg )
 	{
 
 
@@ -47,9 +48,16 @@ public class RegisterPlayer : MonoBehaviour {
 					{
 					    /**it handles when username is not unique**/
 
-						Debug.Log("Error Registering Player... \n " + response.Errors.JSON.ToString());
-					    textError.text = "Username has been taken";
-					    textError.color = Color.red;
+                if (response.Errors.JSON.Contains("Email"))
+                    {
+                        emailError.text = "Email has been taken";
+                        emailError.color = Color.red;
+                    }
+                    else
+                    {
+                        textError.text = "Username has been taken";
+                        textError.color = Color.red;
+                    }
 					}
 		});
 				

@@ -287,7 +287,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\[Akishaqs] Liam\Demo\Rotate.cs" />
-    <Compile Include="Assets\GameSpaceSound.cs" />
     <Compile Include="Assets\GameSparks\GameSparksRTUnity.cs" />
     <Compile Include="Assets\GameSparks\GameSparksSettings.cs" />
     <Compile Include="Assets\GameSparks\GameSparksUnity.cs" />
@@ -383,13 +382,16 @@
     <Compile Include="Assets\Scripts\DiamondRotation.cs" />
     <Compile Include="Assets\Scripts\errorMessages.cs" />
     <Compile Include="Assets\Scripts\ForgetPasswordController.cs" />
+    <Compile Include="Assets\Scripts\GameSpaceSound.cs" />
     <Compile Include="Assets\Scripts\GameSparksManager.cs" />
     <Compile Include="Assets\Scripts\GetLevel.cs" />
+    <Compile Include="Assets\Scripts\GetPlayerData.cs" />
     <Compile Include="Assets\Scripts\HoverActionEffect.cs" />
     <Compile Include="Assets\Scripts\KeyRotation.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Login.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />
+    <Compile Include="Assets\Scripts\MusicManagerLevel01.cs" />
     <Compile Include="Assets\Scripts\NewPasswordController.cs" />
     <Compile Include="Assets\Scripts\PasswordRecoveryRequest.cs" />
     <Compile Include="Assets\Scripts\PathNodes.cs" />
@@ -406,6 +408,8 @@
     <Compile Include="Assets\Scripts\UIPlayCommand1.cs" />
     <Compile Include="Assets\Scripts\UpdateProgress.cs" />
     <Compile Include="Assets\Scripts\Validation.cs" />
+    <Compile Include="Assets\Scripts\VolumeController.cs" />
+    <Compile Include="Assets\Scripts\WalkingPlayerSound.cs" />
     <Compile Include="Assets\UI Assets\Scripts\ButtonClick.cs" />
     <Compile Include="Assets\UI Assets\Scripts\CameraSet.cs" />
     <Compile Include="Assets\UI Assets\Scripts\ClearAllCommands.cs" />

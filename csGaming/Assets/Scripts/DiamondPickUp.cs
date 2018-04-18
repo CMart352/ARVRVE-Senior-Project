@@ -14,7 +14,7 @@ public class DiamondPickUp : MonoBehaviour
 
 	private string currentLevel;
 	private int attempts;
-	private double timeToComplete;
+	private int timeToComplete;
 
 	public static bool playClip; //flag to play success audio clip 
 
@@ -48,11 +48,12 @@ public class DiamondPickUp : MonoBehaviour
 				
 			currentLevel = SceneManager.GetActiveScene().name;
 			attempts = handler.getAttempts ();
-			timeToComplete = clock.getTotalSeconds();
+			timeToComplete = (int) clock.getTotalSeconds();
 
 			string path = currentLevel + ".Attempts.KeysCollected.Time";
 
 			UpdateProgress.ProgressUpdate (path, attempts, timeToComplete);
+            GetPlayerData.GetData(attempts, timeToComplete, 1);
 
            // DoBeep();
             diamond.SetActive(false);
