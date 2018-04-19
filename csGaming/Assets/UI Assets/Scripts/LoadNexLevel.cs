@@ -7,12 +7,16 @@ using UnityEngine.SceneManagement;
 public class LoadNexLevel : MonoBehaviour {
 
 	public Button next;
+	public GameObject messagePanel;
+	SubmitButtonHandler controller;
 
 	// Use this for initialization
 	void Start () {
 		
 		Button btn = next.GetComponent<Button>();
 		btn.onClick.AddListener (NextLevel);
+
+		controller = gameObject.AddComponent<SubmitButtonHandler> ();
 	}
 	
 	// Update is called once per frame
@@ -23,9 +27,8 @@ public class LoadNexLevel : MonoBehaviour {
 
 	void NextLevel()
 	{
-       // float fadeTime = GameObject.Find("FadeScene").GetComponent<TransitionScenes>().beginFade(1);
-       // yield WaitForSeconds(fadeTime);
-        SceneManager.LoadScene ("Level_02");
+		messagePanel.SetActive (false);
+	//	controller.ClearAll ();
 	}
 
 }

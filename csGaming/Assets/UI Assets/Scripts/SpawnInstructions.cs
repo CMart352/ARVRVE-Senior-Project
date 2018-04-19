@@ -17,6 +17,7 @@ public class SpawnInstructions : MonoBehaviour {
 	//public Button commands;
 	//public Button[] removeButtons;
 	//public Button[] editButtons;
+//	LoopControlsCoordinator repeat;
 
 	void Start()
 	{
@@ -150,12 +151,11 @@ public class SpawnInstructions : MonoBehaviour {
 	void Loop()
 	{
 		Debug.Log ("You have clicked the repeat button");
-		GameObject repeatPanel= Instantiate (repeatPrefab) as GameObject;
-		repeatPanel.SetActive (true);
-		//command.name = "MoveDown()";
-		//command.GetComponent<CommandListCommand> ().SetText ("Player.MoveDown()");
-		repeatPanel.transform.SetParent (commandPrefab.transform.parent, false);
+
+			
+			
 	}
 
 
 }
+

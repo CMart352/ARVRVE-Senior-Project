@@ -26,6 +26,8 @@ public class DiamondPickUp : MonoBehaviour
 
 		print ("Diamond start");
 
+
+
 	}
 
     static void DoBeep()

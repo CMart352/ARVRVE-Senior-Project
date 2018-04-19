@@ -7,6 +7,9 @@ public class ContinueToLevel2 : MonoBehaviour {
 
 	GameObject[] nextLevelObjects;
 	public Button nextLevelBtn;
+	SubmitButtonHandler controller;
+	public GameObject messagePanel;
+	public Button cont;
 
 	// Use this for initialization
 	void Start () {
@@ -15,11 +18,22 @@ public class ContinueToLevel2 : MonoBehaviour {
 		nextLevelObjects = GameObject.FindGameObjectsWithTag("LevelCompleted");
 		hidePopUp ();
 
+		controller = gameObject.AddComponent<SubmitButtonHandler> ();
+
+		Button btn = cont.GetComponent<Button>();
+		btn.onClick.AddListener (CloseMessage);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+
+	public void CloseMessage()
+	{
+		messagePanel.SetActive (false);
+		hidePopUp ();
 	}
 
 	/* Deactivate them for now */

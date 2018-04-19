@@ -12,6 +12,8 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	public Button submit;
 	public Button clear;
+	public Button cont;
+	public Button repeat;
 
 	public Text attempts; 
 	int attempt; 
@@ -20,6 +22,9 @@ public class SubmitButtonHandler : MonoBehaviour {
 	GameObject[] editBtn;
 
 	bool submitClicked;
+
+	//LoopControlsCoordinator repeat;
+
 
 
 	UIPlayCommand1 commandExecution;
@@ -32,13 +37,16 @@ public class SubmitButtonHandler : MonoBehaviour {
 		Button submitBtn = submit.GetComponent<Button>();
 		submitBtn.onClick.AddListener (AddCommandsToCommandList);
 
+		Button continueBtn = cont.GetComponent<Button>();
+		continueBtn.onClick.AddListener (ClearAllC);
+
 		//Record original position of the player 
         originalPos = player.transform.localPosition;
         originalRot = player.transform.localRotation;
 
 		//Create instance of the two player handler classes
-		commandProcessor = GetComponent<UIButtonClick>();
-		commandExecution = GetComponent<UIPlayCommand1> ();
+		commandProcessor = gameObject.AddComponent<UIButtonClick> ();
+		commandExecution = gameObject.AddComponent<UIPlayCommand1> ();
         bl = GetComponent<BlocksRotator>();
 
         attempt = 0; 
@@ -47,17 +55,31 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	}
 
+	public void ClearAllC()
+	{
+		/* Return player to original position */
+		player.transform.localPosition = originalPos;
+		player.transform.localRotation = originalRot;
+		commandExecution.indexNode = 0; //to set reset the index node 
+		commandExecution.targetAngle = 0; //to reset the angle rotation
+		commandProcessor.commandList.Clear();
+		attempts.text = "1";
+		repeat.gameObject.SetActive (true);
+
+	}
+
+
+
 	void AddCommandsToCommandList()
 	{
 		if (solutionPanel.transform.childCount == 1)
 			return;
 		
 		/* Return player to original position */
-        player.transform.localPosition = originalPos;
-        player.transform.localRotation = originalRot;
-        commandExecution.indexNode = 0; //to set reset the index node 
-        commandExecution.targetAngle = 0; //to reset the angle rotation
-
+		player.transform.localPosition = originalPos;
+		player.transform.localRotation = originalRot;
+		commandExecution.indexNode = 0; //to set reset the index node 
+		commandExecution.targetAngle = 0; //to reset the angle rotation
 
 		submitClicked = true;
 
@@ -69,6 +91,7 @@ public class SubmitButtonHandler : MonoBehaviour {
 				if (child.name != "Command") { //Original prefab gets ignored
 					commandProcessor.commandList.Add (child.name);
 				}
+
 				sendCommandsToCharacter ();
 			}
 		} else { //Solution panel has commands, return to original position, and retry 

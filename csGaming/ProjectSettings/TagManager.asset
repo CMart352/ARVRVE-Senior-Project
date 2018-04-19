@@ -7,6 +7,9 @@ TagManager:
   - ShowOnPause
   - LevelCompleted
   - Edits
+  - Row1
+  - Row2
+  - Row3
   layers:
   - Default
   - TransparentFX

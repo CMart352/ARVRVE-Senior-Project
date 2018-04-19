@@ -333,3 +333,5 @@
 /Users/Mairim/Documents/GitHub/ARVRVE-Senior-Project/csGaming/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
 /Users/samiratellez/Documents/GitHub/ARVRVE-Senior-Project/csGaming/Temp/bin/Debug/UnityEngine.Advertisements.dll
 /Users/samiratellez/Documents/GitHub/ARVRVE-Senior-Project/csGaming/Temp/bin/Debug/UnityEngine.StandardEvents.dll
+/Users/Mairim/Documents/GitHub/ARVRVE-Senior-Project/csGaming/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/Mairim/Documents/GitHub/ARVRVE-Senior-Project/csGaming/Temp/bin/Debug/Assembly-CSharp.dll
