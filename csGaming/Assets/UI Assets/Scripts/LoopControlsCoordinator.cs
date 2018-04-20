@@ -19,6 +19,7 @@ public class LoopControlsCoordinator : MonoBehaviour {
 	public int TurnRightOrder;
 	public int TurnLeftAmount;
 	public int TurnLeftOrder;
+	public Button repeat;
 
 	public GameObject commandPrefab; 
 
@@ -41,10 +42,17 @@ public class LoopControlsCoordinator : MonoBehaviour {
 		Button exitBtn = exit.GetComponent<Button> ();
 		exitBtn.onClick.AddListener (Exit);
 
+		Button repeatBtn = repeat.GetComponent<Button> ();
+		repeat.onClick.AddListener (Repeat);
+
 		spawner.commandPrefab = commandPrefab;
 		
 	}
+	void Repeat()
+	{
+		loopPanel.SetActive (true);
 
+	}
 	void HandleConfirm()
 	{
 		

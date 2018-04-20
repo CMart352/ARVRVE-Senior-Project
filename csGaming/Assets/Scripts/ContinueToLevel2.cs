@@ -32,8 +32,7 @@ public class ContinueToLevel2 : MonoBehaviour {
 
 	public void CloseMessage()
 	{
-		messagePanel.SetActive (false);
-		hidePopUp ();
+		Application.Quit ();
 	}
 
 	/* Deactivate them for now */

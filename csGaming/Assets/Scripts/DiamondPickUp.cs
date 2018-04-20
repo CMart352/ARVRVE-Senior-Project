@@ -46,6 +46,7 @@ public class DiamondPickUp : MonoBehaviour
 
 			if (clock == null && GetComponent<Timer> () != null) {
 				clock = GetComponent<Timer> ();
+
 			}
 				
 			currentLevel = SceneManager.GetActiveScene().name;
@@ -90,6 +91,7 @@ public class DiamondPickUp : MonoBehaviour
             diamond.SetActive(false);
 			print ("Key has been picked up 3");
 			level2.displayPopUp ();
+			Time.timeScale = 0f;
         }
     }
 

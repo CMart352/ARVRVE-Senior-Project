@@ -12,7 +12,7 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	public Button submit;
 	public Button clear;
-	public Button cont;
+	//public Button cont;
 	public Button repeat;
 
 	public Text attempts; 
@@ -37,8 +37,8 @@ public class SubmitButtonHandler : MonoBehaviour {
 		Button submitBtn = submit.GetComponent<Button>();
 		submitBtn.onClick.AddListener (AddCommandsToCommandList);
 
-		Button continueBtn = cont.GetComponent<Button>();
-		continueBtn.onClick.AddListener (ClearAllC);
+		//Button continueBtn = cont.GetComponent<Button>();
+		//continueBtn.onClick.AddListener (ClearAllC);
 
 		//Record original position of the player 
         originalPos = player.transform.localPosition;
@@ -57,7 +57,9 @@ public class SubmitButtonHandler : MonoBehaviour {
 
 	public void ClearAllC()
 	{
+		Application.Quit ();
 		/* Return player to original position */
+		/*
 		player.transform.localPosition = originalPos;
 		player.transform.localRotation = originalRot;
 		commandExecution.indexNode = 0; //to set reset the index node 
@@ -72,7 +74,7 @@ public class SubmitButtonHandler : MonoBehaviour {
 			}
 		}
 		attempts.text = "1";
-		repeat.gameObject.SetActive (true);
+		repeat.gameObject.SetActive (true);*/
 
 	}
 

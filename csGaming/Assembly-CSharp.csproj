@@ -187,6 +187,7 @@
      <Compile Include="Assets\UI Assets\Scripts\DigitalClock.cs" />
      <Compile Include="Assets\UI Assets\Scripts\DisplayEdit_RemoveButtons.cs" />
      <Compile Include="Assets\UI Assets\Scripts\DisplayLoopPanel.cs" />
+     <Compile Include="Assets\UI Assets\Scripts\ExitGame.cs" />
      <Compile Include="Assets\UI Assets\Scripts\FirstMessage.cs" />
      <Compile Include="Assets\UI Assets\Scripts\HoverOverCommandHandler.cs" />
      <Compile Include="Assets\UI Assets\Scripts\LoadNexLevel.cs" />

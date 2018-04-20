@@ -1,26 +1,36 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BlocksRotator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SubmitButtonHandler.cs">
     <Files>
-      <File FileName="Assets/UI Assets/Scripts/FirstMessage.cs" Line="44" Column="41" />
-      <File FileName="Assets/Scripts/SubmitButtonHandler.cs" Line="32" Column="3" />
+      <File FileName="Assets/Scripts/SubmitButtonHandler.cs" Line="43" Column="44" />
+      <File FileName="Assets/UI Assets/Scripts/FirstMessage.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SaveLevel.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/GetLevel.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/AuthenticatePlayer.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Login.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UIButtonClick.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UIButtonClick.cs" Line="74" Column="1" />
       <File FileName="Assets/Scripts/UIPlayCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/RegisterPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SavePlayerData.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PasswordRecoveryRequest.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SignUp.cs" Line="1" Column="1" />
-      <File FileName="Assets/UI Assets/Scripts/SpawnInstructions.cs" Line="1" Column="1" />
-      <File FileName="Assets/UI Assets/Scripts/LoadNexLevel.cs" Line="26" Column="78" />
+      <File FileName="Assets/UI Assets/Scripts/SpawnInstructions.cs" Line="39" Column="5" />
+      <File FileName="Assets/UI Assets/Scripts/LoadNexLevel.cs" Line="19" Column="5" />
       <File FileName="Assets/Scripts/BlocksRotator.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/ContinueToLevel2.cs" Line="36" Column="12" />
+      <File FileName="Assets/Scripts/DiamondPickUp.cs" Line="94" Column="24" />
+      <File FileName="Assets/Scripts/UIPlayCommand1.cs" Line="266" Column="19" />
+      <File FileName="Assets/UI Assets/Scripts/ClearAllCommands.cs" Line="38" Column="4" />
+      <File FileName="Assets/UI Assets/Scripts/QuitGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/UI Assets/Scripts/Timer.cs" Line="20" Column="3" />
+      <File FileName="Assets/Scripts/TransitionScenes.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/Mairim/Documents/GitHub/ARVRVE-Senior-Project/csGaming/Assets/Scripts/UIButtonClick.cs" line="80" column="20" />
+      <Breakpoint file="/Users/Mairim/Documents/GitHub/ARVRVE-Senior-Project/csGaming/Assets/Scripts/DiamondPickUp.cs" line="83" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
