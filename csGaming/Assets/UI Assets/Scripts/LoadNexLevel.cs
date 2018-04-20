@@ -8,7 +8,7 @@ public class LoadNexLevel : MonoBehaviour {
 
 	public Button next;
 	public GameObject messagePanel;
-	SubmitButtonHandler controller;
+	//SubmitButtonHandler controller;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +16,7 @@ public class LoadNexLevel : MonoBehaviour {
 		Button btn = next.GetComponent<Button>();
 		btn.onClick.AddListener (NextLevel);
 
-		controller = gameObject.AddComponent<SubmitButtonHandler> ();
+		//controller = gameObject.AddComponent<SubmitButtonHandler> ();
 	}
 	
 	// Update is called once per frame

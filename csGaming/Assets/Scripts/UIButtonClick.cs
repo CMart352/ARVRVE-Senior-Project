@@ -67,8 +67,8 @@ public class UIButtonClick : MonoBehaviour
         //Button btn5 = methodButton.GetComponent<Button>();
 
 		//Mairim
-		Button submitBtn = submit.GetComponent<Button>();
-		submitBtn.onClick.AddListener (SubmitCommands);
+		//Button submitBtn = submit.GetComponent<Button>();
+		//submitBtn.onClick.AddListener (SubmitCommands);
 
 		//Record original position of the player 
 		originalPos = player.transform.position;
@@ -96,36 +96,10 @@ public class UIButtonClick : MonoBehaviour
       //  btn5.onClick.AddListener(TaskOnClick);
     }
 
+
 	void SubmitCommands()
 	{
-//		print("Play button pressed!");
-		/*If user had previously clicked the play Button, return player to original position and 
-		 * clear commandList so that when user clicks it again, commands are not duplicated
-		 */
-		if (commandList.Count == 0) {  //Solution Panel is empty, add commands to the list
-			foreach (Transform child in solutionPanel) {
-				if (child.name != "Command") { //Original prefab gets ignored
-					commandList.Add (child.name);
-				}
-			}
-		} else { //Solution panel has commands, return to original position, and retry 
-			commandList.Clear();
-			//Move player to its original position
-			player.transform.position = originalPos;
-			TaskOnClick ();
-		}
-	}
-
-	/* void ClearCommands()
-	{
-		foreach (Transform child in solutionPanel)
-		{
-			if (child.name != "Command") //Original prefab gets ignored
-			{
-				commandList.Add (child.name);
-			}
-		}
-	} */
+	} 
 
 
 

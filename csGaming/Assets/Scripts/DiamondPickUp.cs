@@ -10,7 +10,7 @@ public class DiamondPickUp : MonoBehaviour
     public GameObject diamond;
 	ContinueToLevel2 level2;
 	Timer clock;
-	SubmitButtonHandler handler;
+	//SubmitButtonHandler handler;
 
 	private string currentLevel;
 	private int attempts;
@@ -22,7 +22,7 @@ public class DiamondPickUp : MonoBehaviour
 	void Start () {
 
 		level2 = GetComponent<ContinueToLevel2> ();
-		handler = GetComponent<SubmitButtonHandler> ();
+		//handler = GetComponent<SubmitButtonHandler> ();
 
 		print ("Diamond start");
 
@@ -49,7 +49,7 @@ public class DiamondPickUp : MonoBehaviour
 			}
 				
 			currentLevel = SceneManager.GetActiveScene().name;
-			attempts = handler.getAttempts ();
+			//attempts = handler.getAttempts ();
 			timeToComplete = (int) clock.getTotalSeconds();
 
 			string path = currentLevel + ".Attempts.KeysCollected.Time";

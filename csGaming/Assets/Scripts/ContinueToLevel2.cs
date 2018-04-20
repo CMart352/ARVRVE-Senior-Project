@@ -7,7 +7,7 @@ public class ContinueToLevel2 : MonoBehaviour {
 
 	GameObject[] nextLevelObjects;
 	public Button nextLevelBtn;
-	SubmitButtonHandler controller;
+	//SubmitButtonHandler controller;
 	public GameObject messagePanel;
 	public Button cont;
 
@@ -18,7 +18,7 @@ public class ContinueToLevel2 : MonoBehaviour {
 		nextLevelObjects = GameObject.FindGameObjectsWithTag("LevelCompleted");
 		hidePopUp ();
 
-		controller = gameObject.AddComponent<SubmitButtonHandler> ();
+		//controller = gameObject.AddComponent<SubmitButtonHandler> ();
 
 		Button btn = cont.GetComponent<Button>();
 		btn.onClick.AddListener (CloseMessage);

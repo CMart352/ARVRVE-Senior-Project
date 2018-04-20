@@ -45,8 +45,8 @@ public class SubmitButtonHandler : MonoBehaviour {
         originalRot = player.transform.localRotation;
 
 		//Create instance of the two player handler classes
-		commandProcessor = gameObject.AddComponent<UIButtonClick> ();
-		commandExecution = gameObject.AddComponent<UIPlayCommand1> ();
+		commandProcessor = GetComponent<UIButtonClick> ();
+		commandExecution = GetComponent<UIPlayCommand1> ();
         bl = GetComponent<BlocksRotator>();
 
         attempt = 0; 
