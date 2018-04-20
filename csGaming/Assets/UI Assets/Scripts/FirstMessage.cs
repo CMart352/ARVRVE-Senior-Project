@@ -92,6 +92,7 @@ public class FirstMessage : MonoBehaviour {
 	void ExitMessage6()
 	{
 		tipsNo6.gameObject.SetActive(false); 
+		Time.timeScale = 1f;
 	}
 
 }

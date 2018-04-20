@@ -9,9 +9,9 @@ public class SpawnInstructions : MonoBehaviour {
 	public Button moveLeft;
 	public Button moveUp;
 	public Button moveDown;
-	public Button repeat;
+	//public Button repeat;
 	public GameObject commandPrefab; 
-	public GameObject repeatPrefab; 
+	//public GameObject repeatPrefab; 
 	public string text;
 	//public Canvas background;
 	//public Button commands;
@@ -35,8 +35,8 @@ public class SpawnInstructions : MonoBehaviour {
 		Button moveDownButton = moveDown.GetComponent<Button>();
 		moveDownButton.onClick.AddListener(MoveDown);
 
-		Button rpt = repeat.GetComponent<Button>();
-		rpt.onClick.AddListener(Loop);
+		//Button rpt = repeat.GetComponent<Button>();
+		//rpt.onClick.AddListener(Loop);
 
 	}
 

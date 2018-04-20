@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ContinueToLevel2 : MonoBehaviour {
 
 	GameObject[] nextLevelObjects;
-	public Button nextLevelBtn;
+	//public Button nextLevelBtn;
 	//SubmitButtonHandler controller;
 	public GameObject messagePanel;
 	public Button cont;

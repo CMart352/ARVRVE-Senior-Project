@@ -63,6 +63,14 @@ public class SubmitButtonHandler : MonoBehaviour {
 		commandExecution.indexNode = 0; //to set reset the index node 
 		commandExecution.targetAngle = 0; //to reset the angle rotation
 		commandProcessor.commandList.Clear();
+		//Delete all of the commands in the solution panel
+		foreach (Transform child in solutionPanel)
+		{
+			if (child.name != "Command" && child.name != "RepeatCommandsPanel") //Do not destroy original prefab
+			{
+				Destroy (child.gameObject);
+			}
+		}
 		attempts.text = "1";
 		repeat.gameObject.SetActive (true);
 
